@@ -1,0 +1,97 @@
+{
+client_id: "48d18720-e4e2-4233-a740-d0af9e3ccc94"
+password: "Password1"
+username: "mepp@mailinator.com"
+}
+
+{
+  "membership" : {
+    "programCode" : "EPP",
+    "membershipNumber" : "30838110006600375",
+    "membershipType" : "INDIVIDUAL",
+    "membershipStatus" : "ACTIVE",
+    "tiers" : [ {
+      "tierCode" : "EPP",
+      "tierName" : "EPP Default Tier",
+      "tierFromDate" : "2015-07-21"
+    } ],
+    "activePoints" : 0.00,
+    "pendingPoints" : 110439.00
+  },
+  "profile" : {
+    "title" : "MR.",
+    "givenName" : "epp",
+    "familyName" : "user",
+    "displayName" : "MR. userepp"
+  },
+  "access_token" : "e12f2f362c17989c3587dc8e6d2f6f65",
+  "refresh_token" : "dc28d15527050a91151af1c813316b3a",
+  "token_type" : "bearer",
+  "expires_in" : 3600,
+  "customer_id" : 5322,
+  "customer_version" : "1442858219000"
+}
+
+
+{"username":"meft@mailinator.com","password":"Password1","client_id":"48d18720-e4e2-4233-a740-d0af9e3ccc94"}
+
+
+{
+  "membership" : {
+    "programCode" : "EFT",
+    "membershipNumber" : "30838110006600383",
+    "membershipType" : "INDIVIDUAL",
+    "membershipStatus" : "ACTIVE",
+    "tiers" : [ {
+      "tierCode" : "CC",
+      "tierName" : "Carte Classique",
+      "tierFromDate" : "2015-07-21",
+      "tierToDate" : "2016-07-21",
+      "prospectTier" : "Carte Blanche"
+    } ],
+    "activePoints" : 0.00,
+    "pendingPoints" : 865.00
+  },
+  "profile" : {
+    "title" : "MR.",
+    "givenName" : "mobile",
+    "familyName" : "eft",
+    "displayName" : "MR. eftmobile"
+  },
+  "access_token" : "bda5ebc281d0fd33014f27cb689f4224",
+  "refresh_token" : "a6af13d067335d76132904cda7de4a41",
+  "token_type" : "bearer",
+  "expires_in" : 3600,
+  "customer_id" : 5324,
+  "customer_version" : "1440499700000"
+}
+
+
+{"username":"mengaged@eurostar.com","password":"Password1","client_id":"48d18720-e4e2-4233-a740-d0af9e3ccc94"}
+
+{
+  "membership" : { },
+  "profile" : {
+    "title" : "MR.",
+    "givenName" : "engaged",
+    "familyName" : "user",
+    "displayName" : "MR. userengaged"
+  },
+  "access_token" : "110f94d21aeef6474a5e35e1c48f482d",
+  "refresh_token" : "a34a3878b017d0f86049f5b07d11ec33",
+  "token_type" : "bearer",
+  "expires_in" : 3600,
+  "customer_id" : 27619,
+  "customer_version" : "1443108073000"
+}
+
+
+{"username":"noaccoutuser@mailinator.com","password":"Password1","client_id":"48d18720-e4e2-4233-a740-d0af9e3ccc94"}
+
+{
+  "errors" : [ {
+    "code" : "ACC_200",
+    "message" : "Sorry it seems we are having problems finding this account. We'd suggest that you give your dedicated service centre a call on 08448 117 117. (CRM_358)"
+  } ]
+}
+

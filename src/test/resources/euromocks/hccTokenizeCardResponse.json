@@ -1,0 +1,12 @@
+{
+  "datacashReference": "3700900050837100",
+  "merchantreference": "SSUOCG_1407210926-7d684a673a62",
+  "mode": "LIVE",
+  "reason": "ACCEPTED",
+  "status": "1",
+  "time": 1445608787,
+  "hpsTxn": {
+    "hpsUrl": "https://accreditation.datacash.com/hps-cnp_a/",
+    "sessionId": "168631d8-3ae5-4f68-86f6-c5d2a708c8f3"
+  }
+}

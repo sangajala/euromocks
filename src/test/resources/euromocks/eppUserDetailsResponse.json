@@ -1,0 +1,80 @@
+{
+  "customerNumber" : "758953030",
+  "customerType" : "I",
+  "membership" : {
+    "programCode" : "EPP",
+    "membershipNumber" : "30838110006614657",
+    "membershipType" : "INDIVIDUAL",
+    "membershipStatus" : "ACTIVE",
+    "tiers" : [ {
+      "tierCode" : "EPP",
+      "tierName" : "EPP Default Tier",
+      "tierFromDate" : "2015-11-18"
+    } ],
+    "activePoints" : 0.00,
+    "pendingPoints" : 877.00
+  },
+  "profile" : {
+    "nationality" : "GB",
+    "preferredLanguage" : "EN",
+    "preferredAddress" : "H",
+    "title" : "MR.",
+    "givenName" : "EPP",
+    "familyName" : "User",
+    "displayName" : "MR. UserEPP",
+    "gender" : "U",
+    "dateOfBirth" : "1981-01-01",
+    "countryOfResidence" : "GB",
+    "contactInfo" : {
+      "address" : {
+        "addressLine1" : "test",
+        "addressLine2" : "line2",
+        "townCity" : "town",
+        "countyStateRegion" : "Essex",
+        "postCode" : "12344",
+        "country" : "GB",
+        "addressType" : "H"
+      },
+      "emailAddress" : "auto_test_epp_user@mailinator.com",
+      "phone" : {
+        "number" : "44-7946789456"
+      },
+      "mobile" : {
+        "number" : "7946789456"
+      }
+    }
+  },
+  "savedCardTokens" : [ {
+    "id" : 1,
+    "cardToken" : "************0015",
+    "cardHolderName" : "test user",
+    "cardType" : "VISA Electron",
+    "expiryDate" : "02/16",
+    "expired" : false,
+    "billingAddresses" : [ {
+      "id" : 1,
+      "addressLine1" : "test",
+      "addressLine2" : "line2",
+      "townCity" : "town",
+      "countyStateRegion" : "Essex",
+      "postCode" : "12344",
+      "country" : "GB"
+    } ]
+  } ],
+  "preferences" : {
+    "communications" : {
+      "communication" : false
+    },
+    "market" : "UK",
+    "visits" : { },
+    "customerType" : "EGD",
+    "eftQualifier" : "AE",
+    "doNotRemind" : false,
+    "signedViaFacebook" : false
+  },
+  "enrollmentSource" : "W",
+  "deleted" : false,
+  "suspended" : false,
+  "status" : "Provisional",
+  "version" : "1450289475000"
+}

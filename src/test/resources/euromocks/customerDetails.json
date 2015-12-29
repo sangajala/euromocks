@@ -1,0 +1,47 @@
+{
+  "customerNumber" : "758952962",
+  "customerType" : "I",
+  "profile" : {
+    "preferredLanguage" : "EN",
+    "preferredAddress" : "H",
+    "title" : "MR.",
+    "givenName" : "first",
+    "familyName" : "user",
+    "displayName" : "MR. userfirst",
+    "gender" : "U",
+    "dateOfBirth" : "2015-11-13",
+    "countryOfResidence" : "GB",
+    "contactInfo" : {
+      "address" : {
+        "addressLine1" : "161",
+        "townCity" : "london",
+        "postCode" : "E62EE",
+        "country" : "GB",
+        "addressType" : "H"
+      },
+      "emailAddress" : "stub_engaged_user@mailinator.com",
+      "phone" : {
+        "number" : "44-7453289655"
+      },
+      "mobile" : {
+        "number" : "7453289655"
+      }
+    }
+  },
+  "preferences" : {
+    "communications" : {
+      "communication" : false
+    },
+    "market" : "UK",
+    "visits" : { },
+    "customerType" : "EGD",
+    "eftQualifier" : "NE",
+    "doNotRemind" : false,
+    "signedViaFacebook" : false
+  },
+  "enrollmentSource" : "W",
+  "deleted" : false,
+  "suspended" : false,
+  "status" : "false",
+  "version" : "1447412131000"
+}

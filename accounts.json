@@ -1,0 +1,27 @@
+{
+  "membership" : {
+    "programCode" : "EPP",
+    "membershipNumber" : "30838110006600375",
+    "membershipType" : "INDIVIDUAL",
+    "membershipStatus" : "ACTIVE",
+    "tiers" : [ {
+      "tierCode" : "EPP",
+      "tierName" : "EPP Default Tier",
+      "tierFromDate" : "2015-07-21"
+    } ],
+    "activePoints" : 3320.00,
+    "pendingPoints" : 121472.00
+  },
+  "profile" : {
+    "title" : "MR.",
+    "givenName" : "EPP",
+    "familyName" : "USER",
+    "displayName" : "MR. USEREPP"
+  },
+  "access_token" : "43fdb254aea0c5851d8f8a9d56b87abd",
+  "refresh_token" : "380df981387f512adedb15bb52aaa481",
+  "token_type" : "bearer",
+  "expires_in" : 3600,
+  "customer_id" : 5322,
+  "customer_version" : "1446722286000"
+}
