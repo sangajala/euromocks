@@ -45,6 +45,11 @@ public class SimpleTest //extends AcceptanceTestBase
 ////                .withHeader("Content-Type", matching("application/json")));
 //    }
 
+    @Test
+    public void sample()
+    {
+
+    }
 
 
     @Test
@@ -78,9 +83,9 @@ public class SimpleTest //extends AcceptanceTestBase
 
                 .withHeader("Accept", equalTo("application/json"))
                 .willReturn(aResponse()
-                      //  .withHeader("Access-Control-Allow-Origin", "*")
+                        //  .withHeader("Access-Control-Allow-Origin", "*")
                         .withStatus(200)
-                      //  .withHeader("Content-Type", "application/json")
+                                //  .withHeader("Content-Type", "application/json")
                         .withBody("{\n" +
                                 "  \"client_id\" : \"9d396d4b-c5e3-476c-abe6-12d3683e6d03\"\n" +
                                 "}")));

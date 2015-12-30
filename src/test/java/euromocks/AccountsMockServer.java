@@ -118,7 +118,25 @@ public class AccountsMockServer implements CommandLineRunner {
                 .willReturn(aResponse().withStatus(200)));
     }
 
+    private void getOutboundData() throws IOException {
+        String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/outbound.json"), "UTF-8");
+        stubFor(get(urlEqualTo("/api/mob/uk-en/booking/proposals/return/outbound/7015400/8727100/1/0/0/0/2015-12-30/2015-12-30"))
+                        //.withHeader("Content-Type", equalTo("application/json"))
+                        .willReturn(
+                                aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(response))
 
+        );
+    }
+    private void getInboundData() throws IOException {
+        String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/inbound.json"), "UTF-8");
+        stubFor(post(urlEqualTo("/api/mob/uk-en/booking/proposals/inbound"))
+                        //.withHeader("Content-Type", equalTo("application/json"))
+                        .willReturn(
+                                aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(response))
+
+        );
+    }
+//https://ci.mob.eurostar.com/api/mob/uk-en/booking/proposals/single/outbound/7015400/8727100/1/0/0/0/
 
 
     public static void main(String[] args) throws IOException {
@@ -139,6 +157,8 @@ public class AccountsMockServer implements CommandLineRunner {
         engaged_user();
         getEPPCustomerDetails();
         getEngagedCustomerDetails();
+        getOutboundData();
+        getInboundData();
         logOut();
     }
 
