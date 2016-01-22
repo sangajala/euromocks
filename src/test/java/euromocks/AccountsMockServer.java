@@ -1,6 +1,8 @@
 package euromocks;
 
+import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
+import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import org.apache.commons.io.IOUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -48,6 +50,26 @@ public class AccountsMockServer implements CommandLineRunner {
                         .withBody("{\n" +
                                 "  \"client_id\" : \"9d396d4b-c5e3-476c-abe6-12d3683e6d03\"\n" +
                                 "}")));
+
+    }
+
+    public void postcode() {
+        stubFor(get(urlMatching("/services/getAddress.php?postcode=E62EA"))
+//                .withHeader("Content-Type", containing("application/json"))
+//                .withQueryParam("lang", equalTo("uk-en"))
+                .willReturn(aResponse()
+                                .withHeader("Access-Control-Allow-Origin", "*")
+                                .withHeader("Access-Control-Allow-Credentials", "true")
+                                .withHeader("Access-Control-Allow-Headers", "x-requested -with, Content-Type, Accept,Authorization, cid")
+                                .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+                                .withStatus(200)
+                                .withBody("[{\n" +
+                                        "  \"address\": \"10 Downing Street, London\"\n" +
+                                        "}, {\n" +
+                                        "  \"address\": \"1 Buckingham Palace, London\"\n" +
+                                        "}]")
+
+                ));
 
     }
 
@@ -120,7 +142,7 @@ public class AccountsMockServer implements CommandLineRunner {
 
     private void getOutboundData() throws IOException {
         String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/outbound.json"), "UTF-8");
-        stubFor(get(urlEqualTo("/api/mob/uk-en/booking/proposals/return/outbound/7015400/8727100/1/0/0/0/2015-12-30/2015-12-30"))
+        stubFor(get(urlPathMatching("/api/mob/uk-en/booking/proposals/return/outbound/7015400/8727100/1/0/0/0/.*"))
                         //.withHeader("Content-Type", equalTo("application/json"))
                         .willReturn(
                                 aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(response))
@@ -143,15 +165,24 @@ public class AccountsMockServer implements CommandLineRunner {
         SpringApplication.run(AccountsMockServer.class, args);
     }
     public void run(String... args) throws Exception {
+//        try {
+//            resetAllRequests();
+//            resetToDefault();
+//        }
+//        catch (Exception e)
+//        {
+//
+//        }
+
 //		WireMock.configureFor("localhost", 9099);
-        WireMock.configureFor("52.18.159.167", 8080);
-//                resetAllRequests();
-//        resetToDefault();
-//		WireMockServer wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(9090));
-//		WireMock.configureFor(9090);
-//		wireMockServer.start();
+//        WireMock.configureFor("52.18.159.167", 8080);
+
+		WireMockServer wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(9090));
+		WireMock.configureFor(9090);
+		wireMockServer.start();
         accountsJson();
         optionstest();
+        postcode();
         register();
         epp_user();
         engaged_user();
