@@ -1,0 +1,8 @@
+{
+  "messages" : [ {
+    "level" : "ERROR",
+    "code" : "ETAP_610",
+    "path" : "pnr",
+    "message" : "pnr is mandatory"
+  } ]
+}

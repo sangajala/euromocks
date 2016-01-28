@@ -1,0 +1,7 @@
+{
+  "messages" : [ {
+    "level" : "ERROR",
+    "code" : "ETAP_623",
+    "message" : "Booking SNSIRW already departed. Departure time: 2016-01-22T21:13"
+  } ]
+}

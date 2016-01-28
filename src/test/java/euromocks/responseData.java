@@ -1,5 +1,8 @@
 package euromocks;
 
+import java.text.Format;
+import java.util.Formatter;
+
 /**
  * Created by sriramangajala on 12/11/15.
  */
@@ -12,8 +15,28 @@ public class responseData {
     public static String checkout = "{\"status\":\"success\",\"journey\":{\"LoadTravelOutput\":{\"contact\":{\"title\":\"Mr\",\"firstName\":\"TEST\",\"lastName\":\"USER\",\"email\":\"MTEST00@MAILINATOR.COM\",\"phoneNumber\":\"447894678946\",\"address\":{\"address\":\"TEST LINE 2\",\"city\":\"TEASRT\",\"country\":\"GB\",\"postCode\":\"12345\"}},\"currency\":\"GBP\",\"JourneyRetrievePnrOutputs\":[{\"id\":1,\"destinationCode\":8727100,\"originCode\":7015400,\"arrivalDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"20:47\"},\"departureDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"17:31\"},\"FareAllocations\":[{\"fareInformation\":{\"classOfService\":\"BF\",\"eligibilityChangeMeal\":false,\"eligibilityChangeSeat\":true,\"eligibilityExchange\":false,\"eligibilityForcedExchange\":false,\"eligibilityForcedRefund\":false,\"eligibilityRefund\":false,\"eligibilityUpgrade\":true,\"fareCode\":\"BFPEXARB\",\"flexibilityLevel\":2,\"maskedPrice\":false,\"totalAmount\":147.5,\"cm\":\"\"},\"CheckedInTickets\":[{\"checkedIn\":false,\"passengerId\":\"RMYBTW.1.1\",\"segmentId\":1}],\"PassengerIds\":[\"RMYBTW.1.1\"],\"passengerTypeCode\":\"PT01AD\",\"SegmentIds\":[\"1\"],\"tcn\":\"467029010\"}],\"outboundIndicator\":true,\"TravelSegments\":[{\"id\":1,\"duration\":136,\"startDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"17:31\"},\"endDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"20:47\"},\"marketingCarrierCode\":\"ES\",\"marketingTrainNumber\":\"9044\",\"classOfAccommodation\":\"B\",\"disruptionInformation\":{\"impactedByDisruption\":false},\"MealAvailables\":[],\"MethodOfDeliverys\":[{\"codeMethod\":\"TOD\"},{\"codeMethod\":\"PAH\"},{\"codeMethod\":\"MTK\"}],\"od\":{\"originCode\":\"7015400\",\"destinationCode\":\"8727100\"}}]},{\"id\":2,\"destinationCode\":7015400,\"originCode\":8727100,\"arrivalDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"22:39\"},\"departureDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"21:13\"},\"FareAllocations\":[{\"fareInformation\":{\"classOfService\":\"BF\",\"eligibilityChangeMeal\":false,\"eligibilityChangeSeat\":true,\"eligibilityExchange\":false,\"eligibilityForcedExchange\":false,\"eligibilityForcedRefund\":false,\"eligibilityRefund\":false,\"eligibilityUpgrade\":true,\"fareCode\":\"BFPEXARB\",\"flexibilityLevel\":2,\"maskedPrice\":false,\"totalAmount\":147.5,\"cm\":\"\"},\"CheckedInTickets\":[{\"checkedIn\":false,\"passengerId\":\"RMYBTW.1.1\",\"segmentId\":2}],\"PassengerIds\":[\"RMYBTW.1.1\"],\"passengerTypeCode\":\"PT01AD\",\"SegmentIds\":[\"2\"],\"tcn\":\"467029021\"}],\"outboundIndicator\":false,\"TravelSegments\":[{\"id\":2,\"duration\":146,\"startDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"21:13\"},\"endDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"22:39\"},\"marketingCarrierCode\":\"ES\",\"marketingTrainNumber\":\"9063\",\"classOfAccommodation\":\"B\",\"disruptionInformation\":{\"impactedByDisruption\":false},\"MealAvailables\":[],\"MethodOfDeliverys\":[{\"codeMethod\":\"TOD\"},{\"codeMethod\":\"PAH\"},{\"codeMethod\":\"MTK\"}],\"od\":{\"originCode\":\"8727100\",\"destinationCode\":\"7015400\"}}]}],\"Pnrs\":[\"RMYBTW\"],\"LinkedPnrs\":[],\"PassengerRetrievePnrOutputs\":[{\"eftNumber\":\"30838110006600458\",\"id\":\"RMYBTW.1.1\",\"notAllowedToTravelAlonePassenger\":false,\"passengerType\":\"ADULT\",\"pnrReference\":\"RMYBTW\",\"SeatRetrievePnrOutputs\":[{\"coachNumber\":14,\"seatNumber\":22,\"segmentId\":1},{\"coachNumber\":14,\"seatNumber\":23,\"segmentId\":2}],\"trueName\":{\"firstName\":\"Test\",\"lastName\":\"User\"},\"wheelchair\":false}],\"paymentInformation\":{\"CreditCardTransactions\":{\"CreditCardTransaction\":[{\"actionDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"17:17\"},\"amount\":299,\"cardScheme\":\"VISA\",\"creditCardSurcharge\":4,\"expiryDate\":{\"date\":\"12\\/11\\/2015\",\"time\":\"17:17\"},\"pspTransactionId\":\"3200900051246180\",\"tokenCreditCard\":\"9513326736483605001\"}]}},\"pointOfSale\":null,\"totalPrice\":299}}}";
     public static String engaged_login_response = "{\"membership\":{},\"profile\":{\"title\":\"MR.\",\"givenName\":\"first\",\"familyName\":\"user\",\"displayName\":\"MR.userfirst\"},\"access_token\":\"eff2222785826cce9540989d9b9b4817\",\"refresh_token\":\"2b7565fc2b5208daf382c717cfc6e0b2\",\"token_type\":\"bearer\",\"expires_in\":3600,\"customer_id\":3805,\"customer_version\":\"1447412131000\"}";
     public static String invalid_login_response = "{\"errors\":[{\"code\":\"ACC_200\",\"message\":\"Sorry it seems we are having problems finding this account. We'd suggest that you give your dedicated service centre a call on 08448 117 117. (CRM_358)\"}]}";
-    public void test()
-    {
 
+    public static String proposals = "{\"proposals\":[{\"inbound\":[{\"date\":\"14/01/2015\",\"currency\":\"GBP\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]},{\"date\":\"15/01/2015\",\"currency\":\"GBP\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]}]},{\"outbound\":[{\"date\":\"14/01/2015\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]},{\"date\":\"15/01/2015\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]}]}]}";
+
+    public static String ods = "{\"ods\":[{\"origin\":\"GBLON\",\"destinations\":[\"FRPAR\",\"BEBRU\"]},{\"id\":\"FRPAR\",\"destinations\":[\"GBLON\"]},{\"id\":\"BEBRU\",\"destinations\":[\"GBLON\"]}]}";
+
+
+
+
+    public static String getReference()
+    {
+        String inBoundTime = "0"+Utils.randomNumberBetweenRange(2,7)+":00";
+        String outBoundTime = Utils.randomNumberBetweenRange(20,23)+":00";
+
+          String reference  = "{\"date\":\""+Utils.getCurrentDate()+"\",\"inbound\":{\"time\":\""+inBoundTime+"\"},\"outbound\":{\"time\":\""+outBoundTime+"\"}}";
+
+        return reference;
+    }
+
+
+    public static String getProposals()
+    {
+        String reference = "{\"proposals\":[{\"inbound\":[{\"date\":\""+Utils.getCurrentDate()+"\",\"currency\":\"GBP\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]},{\"date\":\""+Utils.getCurrentDate()+"\",\"currency\":\"GBP\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]}]},{\"outbound\":[{\"date\":\""+Utils.getCurrentDate()+"\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]},{\"date\":\""+Utils.getCurrentDate()+"\",\"timeslots\":[{\"slot\":\"am\",\"price\":\"21.40\"},{\"slot\":\"pm\",\"price\":\"21.40\"}]}]}]}";
+        return reference;
     }
 }

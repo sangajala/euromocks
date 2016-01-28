@@ -1,0 +1,24 @@
+{
+  "booking" : {
+    "pnr" : "TSHICO",
+    "passengers" : [ {
+      "id" : "44AB8CDADBE4779FE068E6126D18B6228C68D565",
+      "firstName" : "TEST",
+      "lastName" : "TEST",
+      "email" : null,
+      "phone" : null,
+      "cin" : null,
+      "optIn" : false,
+      "detailsCaptured" : "NOT_CAPTURED"
+    } ],
+    "infants" : [ ],
+    "linkedPNRs" : [ "TSHICO" ],
+    "eligibleTicketTypes" : [ "PAH", "MOBILE", "PASSBOOK" ],
+    "detailsCaptured" : "NOT_CAPTURED"
+  },
+  "messages" : [ {
+    "level" : "WARNING",
+    "code" : "ETAP_650",
+    "message" : "Cannot get tickets for passenger TEST TEST until details are captured."
+  } ]
+}

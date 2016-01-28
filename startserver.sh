@@ -1,1 +1,1 @@
-java -jar wiremock-1.57-standalone.jar
+java -jar wiremock-1.57-standalone.jar --port 9090

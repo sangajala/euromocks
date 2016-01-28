@@ -1,0 +1,7 @@
+{
+  "messages" : [ {
+    "level" : "ERROR",
+    "code" : "ETAP_602",
+    "message" : "POS 1212 not registered"
+  } ]
+}

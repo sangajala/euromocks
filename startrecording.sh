@@ -1,1 +1,1 @@
-java -jar wiremock-1.57-standalone.jar --proxy-all="http://services.appinstitute.co.uk" --record-mappings --verbose --port=5555
+java -jar wiremock-1.57-standalone.jar --proxy-all="http://ec2-52-18-131-154.eu-west-1.compute.amazonaws.com/" --record-mappings --verbose --port=5555

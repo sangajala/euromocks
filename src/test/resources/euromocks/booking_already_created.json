@@ -1,0 +1,7 @@
+{
+  "messages" : [ {
+    "level" : "ERROR",
+    "code" : "ETAP_621",
+    "message" : "Booking TSHGFH already created"
+  } ]
+}

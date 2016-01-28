@@ -177,9 +177,9 @@ public class AccountsMockServer implements CommandLineRunner {
 //		WireMock.configureFor("localhost", 9099);
 //        WireMock.configureFor("52.18.159.167", 8080);
 
-		WireMockServer wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(9090));
-		WireMock.configureFor(9090);
-		wireMockServer.start();
+//		WireMockServer wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(9090));
+		WireMock.configureFor(Constants.URL,Constants.PORT);
+//		wireMockServer.start();
         accountsJson();
         optionstest();
         postcode();
