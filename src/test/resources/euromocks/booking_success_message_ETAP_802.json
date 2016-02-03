@@ -1,0 +1,39 @@
+{
+  "booking": {
+    "pnr": "TZBKHR",
+    "passengers": [
+      {
+        "id": "D9E31715B80F15D85216D05C45443842CDB4B76A",
+        "firstName": "VIBBT",
+        "lastName": "HVFNCB",
+        "email": null,
+        "phone": null,
+        "cin": null,
+        "optIn": false,
+        "detailsCaptured": "NOT_CAPTURED"
+      }
+    ],
+    "infants": [],
+    "linkedPNRs": [
+      "TZBKHR"
+    ],
+    "eligibleTicketTypes": [
+      "PAH",
+      "MOBILE",
+      "PASSBOOK"
+    ],
+    "detailsCaptured": "NOT_CAPTURED"
+  },
+  "messages": [
+    {
+      "level": "INFO",
+      "code": "ETAP_802",
+      "message": "Booking TZBKHR not refreshed, no modification in SBE detected since last refresh"
+    },
+    {
+      "level": "WARNING",
+      "code": "ETAP_650",
+      "message": "Cannot get tickets for passenger VIBBT HVFNCB until details are captured."
+    }
+  ]
+}

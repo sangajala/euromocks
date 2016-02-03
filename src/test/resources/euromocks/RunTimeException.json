@@ -1,0 +1,9 @@
+{
+  "messages": [
+    {
+      "level": "ERROR",
+      "code": "ETAP_500",
+      "message": "Exception: java.lang.RuntimeException Message: java.util.concurrent.ExecutionException: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.DataException: could not execute statement"
+    }
+  ]
+}

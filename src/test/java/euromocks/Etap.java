@@ -45,11 +45,12 @@ public class Etap implements CommandLineRunner {
                     .withRequestBody(containing("pnr"))
                     .withRequestBody(containing(":"))
 //                    .withRequestBody(matching("?.*"))
-                    .willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString()))
+                    .willReturn(aResponse().withStatus(404).withHeader("Content-Type", "application/json").withBody(json.toJSONString()))
             .atPriority(100));
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     private void pnr_blank() throws IOException {
@@ -141,7 +142,7 @@ public class Etap implements CommandLineRunner {
         }
     }
 
-    private void booking_success() throws IOException {
+    private void booking_success_happy_path() throws IOException {
         JSONParser parser = new JSONParser();
         try {
             FileReader fileReader = new FileReader("src/test/resources/euromocks/booking_success.json");
@@ -149,8 +150,59 @@ public class Etap implements CommandLineRunner {
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(containing("\"accessKey\": \""))
                     .withRequestBody(containing("\"pnr\": \"T"))
+                    .withHeader("cid", equalTo("test"))
+                    .willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                    ).atPriority(8));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void get_refresh_booking_fail() throws IOException {
+        JSONParser parser = new JSONParser();
+        try {
+            FileReader fileReader = new FileReader("src/test/resources/euromocks/pnr_not_found_in_SBE.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            stubFor(get(urlPathMatching("/bookings/.*"))
+                    .withQueryParam("accessKey", containing("1"))
+                    .withQueryParam("pos",containing("G"))
+                    .withQueryParam("refresh",containing("true"))
+                    .withHeader("cid", equalTo("test"))
+                    .willReturn(aResponse().withStatus(404).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                    ).atPriority(5));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void get_refresh_booking_success() throws IOException {
+        JSONParser parser = new JSONParser();
+        try {
+            FileReader fileReader = new FileReader("src/test/resources/euromocks/booking_success_message_ETAP_802.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            stubFor(get(urlPathMatching("/bookings/T.*"))
+                    .withQueryParam("accessKey", containing("1"))
+                    .withQueryParam("pos", containing("G"))
+//                    .withQueryParam("refresh",containing("true"))
+//                    .withHeader("cid", equalTo("test"))
                     .willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                     ).atPriority(5));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void booking_RuntimeException() throws IOException {
+        JSONParser parser = new JSONParser();
+        try {
+            FileReader fileReader = new FileReader("src/test/resources/euromocks/RunTimeException.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            stubFor(post(urlPathMatching("/bookings?.*"))
+//                    .withRequestBody(containing("\"accessKey\": \""))
+                    .withRequestBody(containing("ETAP_500"))
+//                    .withHeader("cid", equalTo("test"))
+                    .willReturn(aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                    ).atPriority(6));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -171,16 +223,16 @@ public class Etap implements CommandLineRunner {
 
 
     public static void main(String[] args) throws IOException {
-//        System.out.print(Utils.getCurrentDate());
         SpringApplication.run(Etap.class, args);
     }
 
     public void run(String... args) throws Exception {
         WireMock.configureFor(Constants.URL, Constants.PORT);
-                try
+        try
         {
             resetAllRequests();
             resetToDefault();
+
         }
         catch (VerificationException e)
         {
@@ -193,10 +245,17 @@ public class Etap implements CommandLineRunner {
             no_access();
             no_access_key_field();
             booking_already_created();
-            booking_success();
+            booking_success_happy_path();
             pnr_not_found_in_SBE();
-//
+
+            get_refresh_booking_fail();
+            get_refresh_booking_success();
+            booking_RuntimeException();
+            saveAllMappings();
+
         }
+
+
 
     }
 }

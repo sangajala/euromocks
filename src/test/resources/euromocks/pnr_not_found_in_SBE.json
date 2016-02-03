@@ -1,7 +1,7 @@
 {
   "messages" : [ {
     "level" : "ERROR",
-    "code" : "ETAP_704",
-    "message" : "SBE provider resource not found. Details: SBE Functional:[ {code: SBE_BOOKEDPNR_NOT_FOUND_OR_DATA_INVALID, message: PNR 1.0 is not found in external system or its data do not match data given as input, reason: null, cause: null} ]"
+    "code" : "ETAP_620",
+    "message" : "Booking TWCJFT not found"
   } ]
 }
