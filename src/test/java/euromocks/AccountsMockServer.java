@@ -113,7 +113,7 @@ public class AccountsMockServer implements CommandLineRunner {
         stubFor(get(urlEqualTo("/refdata/accounts.json?lang=uk-en"))
                 .willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(response)));
     }
-    private void getEPPCustomerDetails() throws IOException {
+    public void getEPPCustomerDetails() throws IOException {
         String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/eppUserDetailsResponse.json"), "UTF-8");
         stubFor(get(urlEqualTo("/customers/3857?lang=uk-en"))
                         .atPriority(1)
@@ -125,7 +125,7 @@ public class AccountsMockServer implements CommandLineRunner {
     }
 
 
-    private void getEngagedCustomerDetails() throws IOException {
+    public void getEngagedCustomerDetails() throws IOException {
         String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/customerDetails.json"), "UTF-8");
         stubFor(get(urlPathMatching("/customers/.*?lang=uk-en"))
                         //.withHeader("Content-Type", equalTo("application/json"))
@@ -135,12 +135,12 @@ public class AccountsMockServer implements CommandLineRunner {
         );
     }
 
-    private void logOut() throws  IOException {
+    public void logOut() throws  IOException {
         stubFor(delete(urlEqualTo("/auth/revoke?lang=uk-en"))
                 .willReturn(aResponse().withStatus(200)));
     }
 
-    private void getOutboundData() throws IOException {
+    public void getOutboundData() throws IOException {
         String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/outbound.json"), "UTF-8");
         stubFor(get(urlPathMatching("/api/mob/uk-en/booking/proposals/return/outbound/7015400/8727100/1/0/0/0/.*"))
                         //.withHeader("Content-Type", equalTo("application/json"))
@@ -149,7 +149,7 @@ public class AccountsMockServer implements CommandLineRunner {
 
         );
     }
-    private void getInboundData() throws IOException {
+    public void getInboundData() throws IOException {
         String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/inbound.json"), "UTF-8");
         stubFor(post(urlEqualTo("/api/mob/uk-en/booking/proposals/inbound"))
                         //.withHeader("Content-Type", equalTo("application/json"))

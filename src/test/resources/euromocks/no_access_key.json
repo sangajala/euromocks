@@ -1,0 +1,7 @@
+{
+  "messages" : [ {
+    "level" : "ERROR",
+    "code" : "ETAP_400",
+    "message" : "Exception: org.springframework.web.bind.MissingServletRequestParameterException Message: Required String parameter 'accessKey' is not present"
+  } ]
+}

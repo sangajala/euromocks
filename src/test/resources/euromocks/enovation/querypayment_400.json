@@ -1,0 +1,9 @@
+{
+  "errors" : [ {
+    "code" : "22",
+    "message" : "Invalid query ref",
+    "property_path" : null,
+    "path" : null,
+    "reason" : "Invalid query ref"
+  } ]
+}

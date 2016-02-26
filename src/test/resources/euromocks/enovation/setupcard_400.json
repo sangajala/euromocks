@@ -1,0 +1,9 @@
+{
+  "errors" : [ {
+    "code" : "PS_400",
+    "message" : "Request malformed.",
+    "property_path" : null,
+    "path" : null,
+    "reason" : "Validation failed for argument at index 3 in method: public com.eurostar.payment.domain.provider.dc.response.Response com.eurostar.payment.rest.controller.PaymentController.setupCardTransaction(java.lang.String,com.eurostar.payment.domain.Channel,com.eurostar.payment.domain.Market,com.eurostar.payment.domain.request.CardTransaction) throws java.lang.Exception, with 1 error(s): [Field error in object 'cardTransaction' on field 'merchantReference': rejected value [12]; codes [Length.cardTransaction.merchantReference,Length.merchantReference,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransaction.merchantReference,merchantReference]; arguments []; default message [merchantReference],2147483647,6]; default message [invalid merchantReference, use atleast 6 characters]] "
+  } ]
+}

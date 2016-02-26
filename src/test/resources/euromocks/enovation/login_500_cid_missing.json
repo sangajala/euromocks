@@ -1,0 +1,11 @@
+{
+  "errors": [
+    {
+      "code": "ENO_500",
+      "message": "Missing request header 'cid' for method parameter of type String",
+      "property_path": null,
+      "path": null,
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "errors": [
+    {
+      "code": "ENO_500",
+      "message": "Required String parameter 'gameCode' is not present",
+      "property_path": null,
+      "path": null,
+      "reason": null
+    }
+  ]
+}
