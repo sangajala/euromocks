@@ -12,7 +12,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 public class SimpleTest //extends AcceptanceTestBase
 {
 
-    @BeforeClass
+    //@BeforeClass
     public static void start()
     {
 //        WireMock.shutdownServer();
@@ -45,14 +45,14 @@ public class SimpleTest //extends AcceptanceTestBase
 ////                .withHeader("Content-Type", matching("application/json")));
 //    }
 
-    @Test
+   // @Test
     public void sample()
     {
 
     }
 
 
-    @Test
+   // @Test
     public void invalidLogin() {
 //        resetAllRequests();
 //        resetToDefault();
@@ -75,7 +75,7 @@ public class SimpleTest //extends AcceptanceTestBase
     }
 
 
-    @Test
+   // @Test
     public void register() {
         stubFor(post(urlPathMatching("/app/register"))
                 .withQueryParam("lang", equalTo("uk-en"))
@@ -92,7 +92,7 @@ public class SimpleTest //extends AcceptanceTestBase
 
     }
 
-    @Test
+  //  @Test
     public void engagedUser() {
         stubFor(post(urlEqualTo("/auth/authenticate?lang=uk-en")).withRequestBody((containing("stub_engaged_user@mailinator.com")))
                         .withHeader("Accept", equalTo("application/json"))
