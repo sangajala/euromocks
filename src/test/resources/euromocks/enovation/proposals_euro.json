@@ -11,22 +11,6 @@
               "price": "21.40"
             },
             {
-              "slot": "am",
-              "price": "55.00"
-            },
-            {
-              "slot": "am",
-              "price": "101.90"
-            },
-            {
-              "slot": "pm",
-              "price": "21.40"
-            },
-            {
-              "slot": "pm",
-              "price": "55.00"
-            },
-            {
               "slot": "pm",
               "price": "101.90"
             }
@@ -39,22 +23,6 @@
             {
               "slot": "am",
               "price": "21.40"
-            },
-            {
-              "slot": "am",
-              "price": "55.00"
-            },
-            {
-              "slot": "am",
-              "price": "101.90"
-            },
-            {
-              "slot": "pm",
-              "price": "21.40"
-            },
-            {
-              "slot": "pm",
-              "price": "55.00"
             },
             {
               "slot": "pm",
@@ -71,29 +39,13 @@
               "price": "21.40"
             },
             {
-              "slot": "am",
-              "price": "55.00"
-            },
-            {
-              "slot": "am",
-              "price": "101.90"
-            },
-            {
-              "slot": "pm",
-              "price": "21.40"
-            },
-            {
-              "slot": "pm",
-              "price": "55.00"
-            },
-            {
               "slot": "pm",
               "price": "101.90"
             }
           ]
         },
         {
-          "date": "2016/04/28",
+          "date": "2016/04/29",
           "currency": "EUR",
           "timeslots": [
             {
@@ -101,24 +53,8 @@
               "price": "19.40"
             },
             {
-              "slot": "am",
-              "price": "65.00"
-            },
-            {
-              "slot": "am",
-              "price": "121.30"
-            },
-            {
               "slot": "pm",
               "price": "19.40"
-            },
-            {
-              "slot": "pm",
-              "price": "65.00"
-            },
-            {
-              "slot": "pm",
-              "price": "121.30"
             }
           ]
         }
@@ -126,36 +62,6 @@
     },
     {
       "outbound": [
-        {
-          "date": "2016/04/29",
-          "currency": "EUR",
-          "timeslots": [
-            {
-              "slot": "am",
-              "price": "21.40"
-            },
-            {
-              "slot": "am",
-              "price": "55.00"
-            },
-            {
-              "slot": "am",
-              "price": "101.90"
-            },
-            {
-              "slot": "pm",
-              "price": "21.40"
-            },
-            {
-              "slot": "pm",
-              "price": "55.00"
-            },
-            {
-              "slot": "pm",
-              "price": "101.90"
-            }
-          ]
-        },
         {
           "date": "2016/04/30",
           "currency": "EUR",
@@ -165,24 +71,8 @@
               "price": "21.40"
             },
             {
-              "slot": "am",
-              "price": "55.00"
-            },
-            {
-              "slot": "am",
-              "price": "101.90"
-            },
-            {
               "slot": "pm",
               "price": "21.40"
-            },
-            {
-              "slot": "pm",
-              "price": "55.00"
-            },
-            {
-              "slot": "pm",
-              "price": "101.90"
             }
           ]
         },
@@ -192,23 +82,7 @@
           "timeslots": [
             {
               "slot": "am",
-              "price": "21.40"
-            },
-            {
-              "slot": "am",
-              "price": "55.00"
-            },
-            {
-              "slot": "am",
               "price": "101.90"
-            },
-            {
-              "slot": "pm",
-              "price": "21.40"
-            },
-            {
-              "slot": "pm",
-              "price": "55.00"
             },
             {
               "slot": "pm",
@@ -222,27 +96,25 @@
           "timeslots": [
             {
               "slot": "am",
+              "price": "55.00"
+            },
+            {
+              "slot": "pm",
+              "price": "55.00"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/04",
+          "currency": "EUR",
+          "timeslots": [
+            {
+              "slot": "am",
               "price": "19.40"
             },
             {
-              "slot": "am",
-              "price": "65.00"
-            },
-            {
-              "slot": "am",
-              "price": "121.30"
-            },
-            {
-              "slot": "pm",
-              "price": "19.40"
-            },
-            {
               "slot": "pm",
               "price": "65.00"
-            },
-            {
-              "slot": "pm",
-              "price": "121.30"
             }
           ]
         }
