@@ -204,7 +204,7 @@ public class Enovation_apis implements CommandLineRunner {
         try {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/gameConfig.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
-            stubFor(get(urlPathEqualTo("/enov/games/GAME1?sessionId=snapsession1"))
+            stubFor(get(urlPathMatching("/enov/games/.*"))
                 //    .withQueryParam("sessionId", containing(".*"))
                     .willReturn(
                             aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
@@ -213,7 +213,7 @@ public class Enovation_apis implements CommandLineRunner {
                                     .withHeader("Access-Control-Allow-Headers", "accept, cid")
                                     .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
 
-                    .atPriority(61));
+                    .atPriority(60));
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -225,19 +225,83 @@ public class Enovation_apis implements CommandLineRunner {
         try {
           //  FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/listOfGames.json");
             //JSONObject json = (JSONObject) parser.parse(fileReader);
-            stubFor(get(urlPathEqualTo("/enov/games?sessionid=snapsession1"))
+            stubFor(get(urlPathEqualTo("/enov/games"))
                     //    .withQueryParam("sessionId", containing(".*"))
                     .willReturn(
                             aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody("[\n" +
                                     "  {\n" +
                                     "    \"code\": \"GAME1\",\n" +
                                     "    \"startDate\": \"2016-01-01\",\n" +
+                                    "    \"endDate\": \"2016-12-01\",\n" +
+                                    "    \"refCodeExpiry\": 7,\n" +
+                                    "    \"maxPassengers\": 4,\n" +
+                                    "    \"minPassengers\": 1,\n" +
+                                    "    \"minAge\": 16,\n" +
+                                    "    \"classOfService\": \"STANDARD\",\n" +
+                                    "    \"tripType\": \"ANY\",\n" +
+                                    "    \"lastUpdated\": \"2016-03-08T15:30:54\",\n" +
+                                    "    \"reminderBeforeTravel\": 2\n" +
+                                    "  },\n" +
+                                    "  {\n" +
+                                    "    \"code\": \"GAME2\",\n" +
+                                    "    \"startDate\": \"2016-06-01\",\n" +
                                     "    \"endDate\": \"2016-05-20\",\n" +
                                     "    \"refCodeExpiry\": 7,\n" +
                                     "    \"maxPassengers\": 4,\n" +
                                     "    \"minPassengers\": 1,\n" +
                                     "    \"classOfService\": \"STANDARD\",\n" +
-                                    "    \"lastUpdated\": \"2016-05-30T22:05:01\"\n" +
+                                    "    \"lastUpdated\": \"2016-08-30T22:05:01\",\n" +
+                                    "    \"reminderBeforeTravel\": 2\n" +
+                                    "  },\n" +
+                                    "  {\n" +
+                                    "    \"code\": \"GAME3\",\n" +
+                                    "    \"startDate\": \"2016-09-01\",\n" +
+                                    "    \"endDate\": \"2016-05-20\",\n" +
+                                    "    \"refCodeExpiry\": 7,\n" +
+                                    "    \"maxPassengers\": 4,\n" +
+                                    "    \"minPassengers\": 1,\n" +
+                                    "    \"classOfService\": \"STANDARD\",\n" +
+                                    "    \"lastUpdated\": \"2016-10-23T22:05:01\",\n" +
+                                    "    \"reminderBeforeTravel\": 2\n" +
+                                    "  },\n" +
+                                    "  {\n" +
+                                    "    \"code\": \"testGame1\",\n" +
+                                    "    \"startDate\": \"2016-04-20\",\n" +
+                                    "    \"endDate\": \"2016-05-20\",\n" +
+                                    "    \"refCodeExpiry\": 7,\n" +
+                                    "    \"maxPassengers\": 4,\n" +
+                                    "    \"minPassengers\": 2,\n" +
+                                    "    \"maxAge\": 25,\n" +
+                                    "    \"minAge\": 16,\n" +
+                                    "    \"classOfService\": \"STANDARD\",\n" +
+                                    "    \"lastUpdated\": \"2016-03-08T15:43:02\",\n" +
+                                    "    \"reminderBeforeTravel\": 2\n" +
+                                    "  },\n" +
+                                    "  {\n" +
+                                    "    \"code\": \"testGame2\",\n" +
+                                    "    \"startDate\": \"2016-04-20\",\n" +
+                                    "    \"endDate\": \"2016-05-20\",\n" +
+                                    "    \"refCodeExpiry\": 7,\n" +
+                                    "    \"maxPassengers\": 4,\n" +
+                                    "    \"minPassengers\": 2,\n" +
+                                    "    \"maxAge\": 25,\n" +
+                                    "    \"minAge\": 16,\n" +
+                                    "    \"classOfService\": \"STANDARD\",\n" +
+                                    "    \"lastUpdated\": \"2016-03-08T15:45:28\",\n" +
+                                    "    \"reminderBeforeTravel\": 2\n" +
+                                    "  },\n" +
+                                    "  {\n" +
+                                    "    \"code\": \"testGame3\",\n" +
+                                    "    \"startDate\": \"2016-04-20\",\n" +
+                                    "    \"endDate\": \"2016-05-20\",\n" +
+                                    "    \"refCodeExpiry\": 7,\n" +
+                                    "    \"maxPassengers\": 4,\n" +
+                                    "    \"minPassengers\": 2,\n" +
+                                    "    \"maxAge\": 25,\n" +
+                                    "    \"minAge\": 16,\n" +
+                                    "    \"classOfService\": \"STANDARD\",\n" +
+                                    "    \"lastUpdated\": \"2016-03-08T15:45:34\",\n" +
+                                    "    \"reminderBeforeTravel\": 2\n" +
                                     "  }\n" +
                                     "]")
                                     .withHeader("Access-Control-Allow-Origin", "*")
