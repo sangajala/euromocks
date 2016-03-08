@@ -292,8 +292,8 @@ public class Enovation_apis implements CommandLineRunner {
                                     "  },\n" +
                                     "  {\n" +
                                     "    \"code\": \"testGame3\",\n" +
-                                    "    \"startDate\": \"2016-04-20\",\n" +
-                                    "    \"endDate\": \"2016-05-20\",\n" +
+                                    "    \"startDate\": \"2016-04-25\",\n" +
+                                    "    \"endDate\": \"2016-05-25\",\n" +
                                     "    \"refCodeExpiry\": 7,\n" +
                                     "    \"maxPassengers\": 4,\n" +
                                     "    \"minPassengers\": 2,\n" +

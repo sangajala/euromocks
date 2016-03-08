@@ -32,7 +32,12 @@ public class Etap implements CommandLineRunner {
     }
 
     public void run(String... args) throws Exception {
-        WireMock.configureFor(Constants.URL, Constants.PORT);
+        if(System.getProperty("URL")==null||System.getProperty("PORT")==null)
+            WireMock.configureFor(Constants.URL, Constants.PORT);
+        else
+            WireMock.configureFor(System.getProperty("URL"), Integer.parseInt(System.getProperty("PORT")));
+
+
         try
         {
             resetAllRequests();
@@ -87,19 +92,19 @@ public class Etap implements CommandLineRunner {
             satishStuff.getGames();
 
 
-            AccountsMockServer accountsMockServer = new AccountsMockServer();
-
-            accountsMockServer.accountsJson();
-            accountsMockServer.optionstest();
-            accountsMockServer.postcode();
-            accountsMockServer.register();
-            accountsMockServer.epp_user();
-            accountsMockServer.engaged_user();
-            accountsMockServer.getEPPCustomerDetails();
-            accountsMockServer.getEngagedCustomerDetails();
-            accountsMockServer.getOutboundData();
-            accountsMockServer.getInboundData();
-            accountsMockServer.logOut();
+//            AccountsMockServer accountsMockServer = new AccountsMockServer();
+//
+//            accountsMockServer.accountsJson();
+//            accountsMockServer.optionstest();
+//            accountsMockServer.postcode();
+//            accountsMockServer.register();
+//            accountsMockServer.epp_user();
+//            accountsMockServer.engaged_user();
+//            accountsMockServer.getEPPCustomerDetails();
+//            accountsMockServer.getEngagedCustomerDetails();
+//            accountsMockServer.getOutboundData();
+//            accountsMockServer.getInboundData();
+//            accountsMockServer.logOut();
 
 
             Enovation_payment enovationPayment = new Enovation_payment();

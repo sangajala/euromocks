@@ -5,7 +5,10 @@ package euromocks;
  */
 public class Constants {
 
-    public static final String URL = "ec2-52-18-179-94.eu-west-1.compute.amazonaws.com";
-    public static final int PORT = 8080;
+    public static String URL = "ec2-52-18-179-94.eu-west-1.compute.amazonaws.com";
+    public static int PORT = 8080;
+
+
+
 
 }
