@@ -1,0 +1,12 @@
+[
+  {
+    "code": "GAME1",
+    "startDate": "2016-01-01",
+    "endDate": "2016-05-20",
+    "refCodeExpiry": 7,
+    "maxPassengers": 4,
+    "minPassengers": 1,
+    "classOfService": "STANDARD",
+    "lastUpdated": "2016-05-30T22:05:01"
+  }
+]

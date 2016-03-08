@@ -78,10 +78,13 @@ public class Etap implements CommandLineRunner {
             satishStuff.ods();
             satishStuff.proposals_more();
             satishStuff.ods_500();
+            satishStuff.ods_400();
             satishStuff.proposals_500();
             satishStuff.proposals_euro();
             satishStuff.login();
             satishStuff.invalid_login();
+            satishStuff.gameConfig();
+            satishStuff.getGames();
 
 
             AccountsMockServer accountsMockServer = new AccountsMockServer();

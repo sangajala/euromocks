@@ -1,8 +1,5 @@
 package euromocks;
 
-import java.text.Format;
-import java.util.Formatter;
-
 /**
  * Created by sriramangajala on 12/11/15.
  */

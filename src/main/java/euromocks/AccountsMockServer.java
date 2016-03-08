@@ -1,8 +1,6 @@
 package euromocks;
 
-import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
-import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import org.apache.commons.io.IOUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,12 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 
-
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
 
 @SpringBootApplication
-public class AccountsMockServer implements CommandLineRunner {
+public class AccountsMockServer// implements CommandLineRunner
+{
 
 
 
@@ -161,36 +159,36 @@ public class AccountsMockServer implements CommandLineRunner {
 //https://ci.mob.eurostar.com/api/mob/uk-en/booking/proposals/single/outbound/7015400/8727100/1/0/0/0/
 
 
-    public static void main(String[] args) throws IOException {
-        SpringApplication.run(AccountsMockServer.class, args);
-    }
-    public void run(String... args) throws Exception {
-//        try {
-//            resetAllRequests();
-//            resetToDefault();
-//        }
-//        catch (Exception e)
-//        {
+//    public static void main(String[] args) throws IOException {
+//        SpringApplication.run(AccountsMockServer.class, args);
+//    }
+//    public void run(String... args) throws Exception {
+////        try {
+////            resetAllRequests();
+////            resetToDefault();
+////        }
+////        catch (Exception e)
+////        {
+////
+////        }
 //
-//        }
-
-//		WireMock.configureFor("localhost", 9099);
-//        WireMock.configureFor("52.18.159.167", 8080);
-
-//		WireMockServer wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(9090));
-		WireMock.configureFor(Constants.URL,Constants.PORT);
-//		wireMockServer.start();
-        accountsJson();
-        optionstest();
-        postcode();
-        register();
-        epp_user();
-        engaged_user();
-        getEPPCustomerDetails();
-        getEngagedCustomerDetails();
-        getOutboundData();
-        getInboundData();
-        logOut();
-    }
+////		WireMock.configureFor("localhost", 9099);
+////        WireMock.configureFor("52.18.159.167", 8080);
+//
+////		WireMockServer wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(9090));
+//		WireMock.configureFor(Constants.URL,Constants.PORT);
+////		wireMockServer.start();
+//        accountsJson();
+//        optionstest();
+//        postcode();
+//        register();
+//        epp_user();
+//        engaged_user();
+//        getEPPCustomerDetails();
+//        getEngagedCustomerDetails();
+//        getOutboundData();
+//        getInboundData();
+//        logOut();
+//    }
 
 }

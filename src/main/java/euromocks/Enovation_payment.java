@@ -16,7 +16,7 @@ public class Enovation_payment {
     void setuppayment_200() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/enovation/setuppayment_200.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/setuppayment_200.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/enov/pay/setup?.*"))
                     .withRequestBody(containing("merchantReference"))
@@ -37,7 +37,7 @@ public class Enovation_payment {
     void setuppayment_500() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/enovation/setuppayment_500.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/setuppayment_500.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/enov/pay/setup?.*"))
                     .willReturn(aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
@@ -54,7 +54,7 @@ public class Enovation_payment {
     void querypayment_400() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/enovation/querypayment_400.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/querypayment_400.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlPathMatching("/enov/pay/query/123456789"))
                     .willReturn(aResponse().withStatus(400).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
@@ -72,7 +72,7 @@ public class Enovation_payment {
     void querypayment_200() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/enovation/querypayment_200.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/querypayment_200.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlPathMatching("/enov/pay/query"))
 //                    .withRequestBody(containing("merchantReference"))

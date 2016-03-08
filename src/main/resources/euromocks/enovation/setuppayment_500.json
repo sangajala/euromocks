@@ -1,0 +1,9 @@
+{
+  "errors" : [ {
+    "code" : "ENO_500",
+    "message" : "setupCard failed and no fallback available.",
+    "property_path" : null,
+    "path" : null,
+    "reason" : null
+  } ]
+}

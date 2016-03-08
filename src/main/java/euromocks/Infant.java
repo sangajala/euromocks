@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 
 /**
  * Created by sriramangajala on 05/02/16.
@@ -17,7 +16,7 @@ public class Infant {
      void infant_get_success() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/post_infant_success.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/post_infant_success.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //http://ec2-52-18-131-154.eu-west-1.compute.amazonaws.com/bookings/TBQUNO/infants?accessKey=user
             stubFor(get(urlPathMatching("/bookings/.*/infants/.*"))
@@ -40,7 +39,7 @@ public class Infant {
      void post_infant_booking_already_created() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/infant_already_created.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/infant_already_created.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings/.*/infants"))
                     .withQueryParam("accessKey", matching("created"))
@@ -58,7 +57,7 @@ public class Infant {
      void post_infant_booking_pnr_access_not_found() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/pnr_not_found_in_SBE.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/pnr_not_found_in_SBE.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings/.*/infants"))
                     .withQueryParam("accessKey", matching(".*"))
@@ -77,7 +76,7 @@ public class Infant {
      void post_infant_passenger_id_unknown() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/infant_e682.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/infant_e682.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings/.*/infants"))
                     .withQueryParam("accessKey", matching("ETAP_682"))
@@ -96,7 +95,7 @@ public class Infant {
       void infant_post_success() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/post_infant_success.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/post_infant_success.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //http://ec2-52-18-131-154.eu-west-1.compute.amazonaws.com/bookings/TBQUNO/infants?accessKey=user
             stubFor(post(urlPathMatching("/bookings/.*/infants"))

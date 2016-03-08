@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 
 /**
  * Created by sriramangajala on 05/02/16.
@@ -17,7 +16,7 @@ public class Etap_Bookings {
      void error_500() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/error_500.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/error_500.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlEqualTo("/bookings?pos=GBZXA"))
                     .withRequestBody(containing("\"accessKey\": \""))
@@ -32,7 +31,7 @@ public class Etap_Bookings {
      void pnr_not_found_in_SBE() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/pnr_not_found_in_SBE.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/pnr_not_found_in_SBE.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(containing("\"accessKey\": \""))
@@ -50,7 +49,7 @@ public class Etap_Bookings {
      void pnr_blank() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/pnr_blank.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/pnr_blank.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(containing("\"accessKey\": \""))
@@ -65,7 +64,7 @@ public class Etap_Bookings {
      void pos_invalid() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/pos_invalid.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/pos_invalid.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlEqualTo("/bookings?pos=ABCDE"))
                     .willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
@@ -78,7 +77,7 @@ public class Etap_Bookings {
      void old_pnr() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/old_pnr.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/old_pnr.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(containing("\"accessKey\": \""))
@@ -95,7 +94,7 @@ public class Etap_Bookings {
      void no_access() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/no_access.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/no_access.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(notMatching("accessKey"))
@@ -108,7 +107,7 @@ public class Etap_Bookings {
      void no_access_key_field() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/no_access.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/no_access.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(containing("\"accessKey\": \"\""))
@@ -126,7 +125,7 @@ public class Etap_Bookings {
      void no_access_key_field_infant_post() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/no_access.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/no_access.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings/.*/infant"))
                     .withQueryParam("accessKey", equalTo(""))
@@ -146,7 +145,7 @@ public class Etap_Bookings {
      void booking_already_created() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/booking_already_created.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/booking_already_created.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(containing("\"accessKey\": \""))
@@ -167,7 +166,7 @@ public class Etap_Bookings {
      void booking_success_happy_path() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/booking_success.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/booking_success.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
                     .withRequestBody(containing("\"accessKey\": \""))
@@ -187,7 +186,7 @@ public class Etap_Bookings {
      void get_refresh_booking_fail() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/pnr_not_found_in_SBE.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/pnr_not_found_in_SBE.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlPathMatching("/bookings/.*"))
 //                    .withQueryParam("accessKey", containing("1"))
@@ -208,7 +207,7 @@ public class Etap_Bookings {
      void get_refresh_booking_success() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/booking_success_message_ETAP_802.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/booking_success_message_ETAP_802.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlPathMatching("/bookings/T.*"))
                     .withQueryParam("accessKey", matching(".*"))
@@ -229,7 +228,7 @@ public class Etap_Bookings {
      void no_access_key() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/no_access_key.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/no_access_key.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlMatching("/bookings/T.*"))
                     .withQueryParam("accessKey", equalTo(""))
@@ -251,7 +250,7 @@ public class Etap_Bookings {
      void booking_RuntimeException() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/test/resources/euromocks/RunTimeException.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/RunTimeException.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathMatching("/bookings?.*"))
 //                    .withRequestBody(containing("\"accessKey\": \""))

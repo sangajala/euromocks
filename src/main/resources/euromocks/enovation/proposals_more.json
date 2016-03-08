@@ -1,0 +1,320 @@
+{
+  "proposals": [
+    {
+      "inbound": [
+        {
+          "date": "2016/04/25",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "21.40"
+            },
+            {
+              "slot": "pm",
+              "price": "101.90"
+            }
+          ]
+        },
+        {
+          "date": "2016/04/26",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "21.40"
+            },
+            {
+              "slot": "pm",
+              "price": "101.90"
+            }
+          ]
+        },
+        {
+          "date": "2016/04/27",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "21.40"
+            },
+            {
+              "slot": "pm",
+              "price": "101.90"
+            }
+          ]
+        },
+        {
+          "date": "2016/04/29",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/01",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/05",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/07",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        }
+        ,{
+          "date": "2016/05/09",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        }
+        ,{
+          "date": "2016/05/10",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        }
+        ,{
+          "date": "2016/05/12",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/13",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "19.40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outbound": [
+        {
+          "date": "2016/04/30",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "21.40"
+            },
+            {
+              "slot": "pm",
+              "price": "21.40"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/01",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "101.90"
+            },
+            {
+              "slot": "pm",
+              "price": "101.90"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/02",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "55.00"
+            },
+            {
+              "slot": "pm",
+              "price": "55.00"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/04",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "65.00"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/06",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "65.00"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/08",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "65.00"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/10",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "65.00"
+            }
+          ]
+        }
+        ,{
+          "date": "2016/05/12",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "65.00"
+            }
+          ]
+        }
+        ,{
+          "date": "2016/05/14",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "65.00"
+            }
+          ]
+        }
+        ,{
+          "date": "2016/05/16",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "19.40"
+            },
+            {
+              "slot": "pm",
+              "price": "65.00"
+            }
+          ]
+        },
+        {
+          "date": "2016/05/17",
+          "currency": "GBP",
+          "timeslots": [
+            {
+              "slot": "am",
+              "price": "119.40"
+            },
+            {
+              "slot": "pm",
+              "price": "1065.00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

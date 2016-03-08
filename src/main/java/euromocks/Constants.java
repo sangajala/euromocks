@@ -1,7 +1,5 @@
 package euromocks;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 /**
  * Created by sriramangajala on 26/01/16.
  */

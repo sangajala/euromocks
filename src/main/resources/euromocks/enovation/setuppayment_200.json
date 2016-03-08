@@ -1,0 +1,33 @@
+{
+  "ccs" : null,
+  "cardTxn" : null,
+  "risk" : null,
+  "datacashReference" : "3500900053544497",
+  "merchantreference" : "eNovationRef",
+  "mode" : "LIVE",
+  "reason" : "ACCEPTED",
+  "status" : "1",
+  "time" : 1455641459,
+  "information" : null,
+  "hpsTxn" : {
+    "method" : null,
+    "pageSetId" : null,
+    "cvvOnly" : null,
+    "hccCard" : null,
+    "hccCardDetails" : null,
+    "returnUrl" : null,
+    "expiryUrl" : null,
+    "dynamicData" : null,
+    "hpsUrl" : "http://rockhoppr.io/",
+    "sessionId" : "fd2e016c-0262-4a2d-a593-36ab29e9c3e1",
+    "dynamicCapture" : null,
+    "captureStatus" : null,
+    "cardScheme" : null,
+    "country" : null,
+    "cv2Captured" : null,
+    "expiryDate" : null,
+    "issuer" : null,
+    "pan" : null
+  },
+  "ccsrateResponseTxn" : null
+}

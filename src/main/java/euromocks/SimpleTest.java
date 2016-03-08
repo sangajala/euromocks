@@ -1,8 +1,6 @@
 package euromocks;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
