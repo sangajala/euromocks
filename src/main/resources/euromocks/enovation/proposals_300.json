@@ -1,0 +1,8 @@
+{
+  "errors": [
+    {
+      "code": "ENO_301",
+      "message": "No Outbound and Inbound availabilities for the input dates"
+    }
+  ]
+}

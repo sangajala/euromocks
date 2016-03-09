@@ -85,6 +85,7 @@ public class Etap implements CommandLineRunner {
             satishStuff.ods_500();
             satishStuff.ods_400();
             satishStuff.proposals_500();
+            satishStuff.proposals_300();
             satishStuff.proposals_euro();
             satishStuff.login();
             satishStuff.invalid_login();

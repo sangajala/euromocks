@@ -13,7 +13,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 /**
  * Created by sriramangajala on 22/01/16.
  */
-public class Enovation_apis implements CommandLineRunner {
+public class Enovation_apis {
 
 
     public void ods() throws IOException {
@@ -22,12 +22,11 @@ public class Enovation_apis implements CommandLineRunner {
         FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/ods.json");
         try {
             JSONObject json = (JSONObject) parser.parse(fileReader);
-
-            stubFor(get(urlPathMatching("/enov/ods"))
+            stubFor(get(urlEqualTo("/enov/availabilities/ods"))
                             .willReturn(
                                     aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString()))
 
-            );
+            .atPriority(1));
 
         } catch (ParseException e) {
             e.printStackTrace();
@@ -40,7 +39,7 @@ public class Enovation_apis implements CommandLineRunner {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/ods_500.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
 
-            stubFor(get(urlEqualTo("/enov/ods?pos=error"))
+            stubFor(get(urlEqualTo("/enov/availabilities/ods?pos=error"))
                             .willReturn(
                                     aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString()))
 
@@ -56,7 +55,7 @@ public class Enovation_apis implements CommandLineRunner {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/ods_500.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
 
-            stubFor(get(urlEqualTo("/enov/ods?pos=400"))
+            stubFor(get(urlEqualTo("/enov/availabilities/ods?pos=400"))
                             .willReturn(
                                     aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString()))
 
@@ -73,7 +72,7 @@ public class Enovation_apis implements CommandLineRunner {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
-            stubFor(post(urlPathEqualTo("/enov/proposals"))
+            stubFor(post(urlPathMatching("/enov/availabilities/proposals"))
                             //   .withRequestBody(containing("\"noOfPassengers\":\"2\""))
                             .willReturn(
                                     aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
@@ -96,7 +95,7 @@ public class Enovation_apis implements CommandLineRunner {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_more.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
-            stubFor(post(urlPathEqualTo("/enov/proposals"))
+            stubFor(post(urlPathEqualTo("/enov/availabilities/proposals"))
                             .withRequestBody(containing("\"noOfPassengers\":\"2\""))
                             .willReturn(
                                     aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
@@ -119,7 +118,7 @@ public class Enovation_apis implements CommandLineRunner {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_euro.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
-            stubFor(post(urlPathEqualTo("/enov/proposals"))
+            stubFor(post(urlPathEqualTo("/enov/availabilities/proposals"))
                             .withRequestBody(containing("\"noOfPassengers\":\"3\""))
                             .willReturn(
                                     aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
@@ -141,10 +140,32 @@ public class Enovation_apis implements CommandLineRunner {
         try {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_500.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
-            stubFor(post(urlPathEqualTo("/enov/proposals?pos=error"))
+            stubFor(post(urlPathEqualTo("/enov/availabilities/proposals?pos=error"))
 
                             .willReturn(
                                     aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                            .withHeader("Access-Control-Allow-Origin", "*")
+                                            .withHeader("Access-Control-Allow-Credentials", "true")
+                                            .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                            .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
+
+            );
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void proposals_300() throws IOException {
+        JSONParser parser = new JSONParser();
+        try {
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_300.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            stubFor(post(urlPathMatching("/enov/availabilities/proposals"))
+                            .withRequestBody(containing("\"noOfPassengers\":\"4\""))
+
+                            .willReturn(
+                                    aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                             .withHeader("Access-Control-Allow-Origin", "*")
                                             .withHeader("Access-Control-Allow-Credentials", "true")
                                             .withHeader("Access-Control-Allow-Headers", "accept, cid")
@@ -325,11 +346,11 @@ public class Enovation_apis implements CommandLineRunner {
 
         );
     }
-
-
-    public void run(String... strings) throws Exception {
-
-    }
+//
+//
+//    public void run(String... strings) throws Exception {
+//
+//    }
 }
 
 
