@@ -1,0 +1,591 @@
+{
+  "proposals": {
+    "outbound": [
+      {
+        "date": "2016-04-29",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-28",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-27",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-26",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-25",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-24",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-23",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-22",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-21",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-20",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-19",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-18",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-17",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-16",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-15",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-14",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-13",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-12",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-11",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-10",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-09",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-08",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-07",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-06",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-05",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-04",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-03",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-02",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-01",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      }
+    ],
+    "inbound": [
+      {
+        "date": "2016-04-29",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-28",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-27",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-26",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-25",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-24",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-23",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-22",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-21",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-20",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-19",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-18",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-17",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-16",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-15",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-14",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-13",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-12",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-11",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-10",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-09",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-08",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-07",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-06",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-05",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-04",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-03",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-02",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      },
+      {
+        "date": "2016-04-01",
+        "currency": "GBP",
+        "timeslots": {
+          "ALLDAY": {
+            "price": 25,
+            "remainingSeats": 50
+          }
+        }
+      }
+    ],
+    "timeSlots": [
+      "ALLDAY"
+    ]
+  }
+}

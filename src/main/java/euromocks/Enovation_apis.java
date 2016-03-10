@@ -80,7 +80,7 @@ public class Enovation_apis {
                                             .withHeader("Access-Control-Allow-Credentials", "true")
                                             .withHeader("Access-Control-Allow-Headers", "accept, cid")
                                             .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
-                            .atPriority(43)
+                            .atPriority(49)
 
             );
 
@@ -104,6 +104,29 @@ public class Enovation_apis {
                                             .withHeader("Access-Control-Allow-Headers", "accept, cid")
                                             .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
                             .atPriority(42)
+
+            );
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void proposals_inbound() throws IOException {
+        JSONParser parser = new JSONParser();
+        try {
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_inbound.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
+            stubFor(post(urlPathEqualTo("/enov/availabilities/proposals"))
+                            .withRequestBody(containing("\"noOfPassengers\":\"4\""))
+                            .willReturn(
+                                    aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                            .withHeader("Access-Control-Allow-Origin", "*")
+                                            .withHeader("Access-Control-Allow-Credentials", "true")
+                                            .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                            .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
+                            .atPriority(45)
 
             );
 

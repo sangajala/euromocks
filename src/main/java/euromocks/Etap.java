@@ -80,6 +80,7 @@ public class Etap implements CommandLineRunner {
 
             satishStuff.reference();
             satishStuff.proposals();
+            satishStuff.proposals_inbound();
             satishStuff.ods();
             satishStuff.proposals_more();
             satishStuff.ods_500();
