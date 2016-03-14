@@ -16,16 +16,6 @@
         }
       },
       {
-        "date": "2016-04-01",
-        "currency": "GBP",
-        "timeslots": {
-          "PM": {
-            "price": 25,
-            "remainingSeats": 50
-          }
-        }
-      },
-      {
         "date": "2016-04-28",
         "currency": "GBP",
         "timeslots": {
