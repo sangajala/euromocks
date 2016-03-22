@@ -1,5 +1,6 @@
 {
-  "playerId": 123244,
-  "sessionId": "123129832173312731F",
-  "status": "REGISTERED"
+  "playerId" : 11113,
+  "status" : "ALREADY_REGISTERED",
+  "sessionId" : "XY8tCLlMzlDIpl96Ygo1raikNIaMRA",
+  "activeBookings" : false
 }

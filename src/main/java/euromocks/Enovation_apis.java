@@ -25,9 +25,16 @@ public class Enovation_apis {
             stubFor(get(urlPathMatching("/enov/availabilities/ods"))
                     .willReturn(
                             aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
-                                    .withHeader("Content-Type", "application/json"))
+                                    .withHeader("Content-Type", "application/json")
+                    .withHeader("Access-Control-Allow-Origin", "*")
+                    .withHeader("Access-Control-Allow-Credentials", "true")
+                    .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                    .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+                    .withHeader("Content-Type", "application/json"))
 
-                    .atPriority(1));
+
+                    .atPriority(1)
+            );
 
         } catch (ParseException e) {
             e.printStackTrace();
@@ -42,7 +49,12 @@ public class Enovation_apis {
 
             stubFor(get(urlEqualTo("/enov/availabilities/ods?pos=error"))
                             .willReturn(
-                                    aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString()))
+                                    aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                            .withHeader("Access-Control-Allow-Origin", "*")
+                                            .withHeader("Access-Control-Allow-Credentials", "true")
+                                            .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                            .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+                                            .withHeader("Content-Type", "application/json"))
 
             );
 
@@ -209,7 +221,7 @@ public class Enovation_apis {
         try {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/login.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
-            stubFor(post(urlPathEqualTo("/enov/players/signin"))
+            stubFor(post(urlPathMatching("/enov/players/signin"))
 //                            .withRequestBody(containing("valid"))
                             .willReturn(
                                     aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
