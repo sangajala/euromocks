@@ -23,17 +23,17 @@ public class Enovation_apis {
         try {
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlPathMatching("/enov/availabilities/ods"))
-                    .willReturn(
-                            aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
-                                    .withHeader("Content-Type", "application/json")
-                    .withHeader("Access-Control-Allow-Origin", "*")
-                    .withHeader("Access-Control-Allow-Credentials", "true")
-                    .withHeader("Access-Control-Allow-Headers", "accept, cid")
-                    .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
-                    .withHeader("Content-Type", "application/json"))
+                            .willReturn(
+                                    aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                            .withHeader("Content-Type", "application/json")
+                                            .withHeader("Access-Control-Allow-Origin", "*")
+                                            .withHeader("Access-Control-Allow-Credentials", "true")
+                                            .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                            .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+                                            .withHeader("Content-Type", "application/json"))
 
 
-                    .atPriority(1)
+                            .atPriority(1)
             );
 
         } catch (ParseException e) {
@@ -82,18 +82,19 @@ public class Enovation_apis {
     public void proposals() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_invalid_session.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
             stubFor(post(urlPathMatching("/enov/availabilities/proposals"))
                             //   .withRequestBody(containing("\"noOfPassengers\":\"2\""))
                             .willReturn(
-                                    aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                    aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                             .withHeader("Access-Control-Allow-Origin", "*")
                                             .withHeader("Access-Control-Allow-Credentials", "true")
-                                            .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                            .withHeader("Access-Control-Allow-Headers", "accept, cid,Content-Type")
                                             .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
-                                            .withHeader("Content-Type", "application/json"))
+                                      .withHeader("Content-Type", "application/json")
+                            )
                             .atPriority(49)
 
             );
@@ -106,11 +107,11 @@ public class Enovation_apis {
     public void proposals_more() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_more.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_AMPM.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
             stubFor(post(urlPathMatching("/enov/availabilities/proposals"))
-                            .withRequestBody(containing("\"noOfPassengers\":\"2\""))
+//                            .withRequestBody(containing("\"noOfPassengers\":\"2\""))
                             .willReturn(
                                     aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                             .withHeader("Access-Control-Allow-Origin", "*")
@@ -244,9 +245,30 @@ public class Enovation_apis {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/login_500.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(post(urlPathEqualTo("/enov/players/signin"))
-                    .withRequestBody(containing("invalid"))
+                    .withRequestBody(containing("mobile"))
                     .willReturn(
                             aResponse().withStatus(500).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                    .withHeader("Access-Control-Allow-Origin", "*")
+                                    .withHeader("Access-Control-Allow-Credentials", "true")
+                                    .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                    .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
+
+                    .atPriority(51));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void invalid_login_401() throws IOException {
+        JSONParser parser = new JSONParser();
+        try {
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/login_401.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            stubFor(post(urlPathEqualTo("/enov/players/signin"))
+                    .withRequestBody(containing("sriram"))
+                    .willReturn(
+                            aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                     .withHeader("Access-Control-Allow-Origin", "*")
                                     .withHeader("Access-Control-Allow-Credentials", "true")
                                     .withHeader("Access-Control-Allow-Headers", "accept, cid")
@@ -262,12 +284,12 @@ public class Enovation_apis {
     public void gameConfig() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/gameConfig.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/games_eno100.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
-            stubFor(get(urlPathMatching("/enov/games/.*"))
+            stubFor(get(urlPathMatching("/enov/games/GAME1"))
                     //    .withQueryParam("sessionId", containing(".*"))
                     .willReturn(
-                            aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                            aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                     .withHeader("Access-Control-Allow-Origin", "*")
                                     .withHeader("Access-Control-Allow-Credentials", "true")
                                     .withHeader("Access-Control-Allow-Headers", "accept, cid")
@@ -282,14 +304,16 @@ public class Enovation_apis {
     }
 
     public void getGames() throws IOException {
-   //     JSONParser parser = new JSONParser();
+        JSONParser parser = new JSONParser();
         try {
-          //  FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/listOfGames.json");
-            //JSONObject json = (JSONObject) parser.parse(fileReader);
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/games_eno101.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlPathEqualTo("/enov/games"))
                     //    .withQueryParam("sessionId", containing(".*"))
                     .willReturn(
-                            aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody("[\n" +
+//                            aResponse().withStatus(404).withHeader("Content-Type", "application/json").withBody(json.toJSONString()
+                            aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(
+                                    "[\n" +
                                     "  {\n" +
                                     "    \"code\": \"GAME1\",\n" +
                                     "    \"startDate\": \"2016-01-01\",\n" +
@@ -369,6 +393,7 @@ public class Enovation_apis {
                                     .withHeader("Access-Control-Allow-Credentials", "true")
                                     .withHeader("Access-Control-Allow-Headers", "accept, cid")
                                     .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
+//                            ))
 
                     .atPriority(61));
 

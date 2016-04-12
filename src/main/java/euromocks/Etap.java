@@ -20,7 +20,10 @@ public class Etap implements CommandLineRunner {
                                 .withHeader("Access-Control-Allow-Origin", "*")
                                 .withHeader("Access-Control-Allow-Credentials", "true")
                                 .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                .withHeader("Access-Control-Request-Headers", "accept, cid")
                                 .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+
+                                .withHeader("Content-Type", "application/json")
                                 .withStatus(200)
 
                 ));
@@ -79,17 +82,18 @@ public class Etap implements CommandLineRunner {
             Enovation_apis satishStuff = new Enovation_apis();
 
             satishStuff.reference();
-            satishStuff.proposals();
-            satishStuff.proposals_inbound();
+//            satishStuff.proposals();
+//            satishStuff.proposals_inbound();
             satishStuff.ods();
             satishStuff.proposals_more();
             satishStuff.ods_500();
             satishStuff.ods_400();
-            satishStuff.proposals_500();
-            satishStuff.proposals_300();
+//            satishStuff.proposals_500();
+//            satishStuff.proposals_300();
             satishStuff.proposals_euro();
             satishStuff.login();
-            satishStuff.invalid_login();
+//            satishStuff.invalid_login();
+//            satishStuff.invalid_login_401();
             satishStuff.gameConfig();
             satishStuff.getGames();
 

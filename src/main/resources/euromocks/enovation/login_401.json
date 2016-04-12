@@ -1,0 +1,8 @@
+{
+  "errors": [
+    {
+      "code": "ENO_202",
+      "message": "Facebook error, response token is invalid"
+    }
+  ]
+}

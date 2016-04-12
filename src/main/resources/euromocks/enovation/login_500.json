@@ -1,8 +1,8 @@
 {
   "errors": [
     {
-      "code": "ENO_Code",
-      "message": "Invalid token provided"
+      "code": "ENO_201",
+      "message": "Facebook error, invalid access token or app secret or app token"
     }
   ]
 }

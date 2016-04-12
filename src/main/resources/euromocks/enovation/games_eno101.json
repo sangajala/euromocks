@@ -1,0 +1,6 @@
+{
+  "errors" : [ {
+    "code" : "ENO_101",
+    "message" : "Invalid game"
+  } ]
+}
