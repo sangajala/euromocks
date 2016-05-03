@@ -1,0 +1,877 @@
+{
+  "bookings": {
+    "ticketed": [
+      {
+        "referenceCode": "TICKETING123",
+        "pnr": "TCARML",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "firstperson"
+          },
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "secondperson"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-21",
+          "departureTime": "07:55",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "inbound": {
+          "departureDate": "2016-05-23",
+          "departureTime": "17:55",
+          "origin": "8727100",
+          "destination": "7015400"
+        }
+      },
+      {
+        "referenceCode": "TICKETING123",
+        "pnr": "TCARML",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "firstperson"
+          },
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "secondperson"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-26",
+          "departureTime": "07:55",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "inbound": {
+          "departureDate": "2016-05-27",
+          "departureTime": "17:55",
+          "origin": "8727100",
+          "destination": "7015400"
+        }
+      },
+      {
+        "referenceCode": "TICKETING123",
+        "pnr": "TCARML",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "firstperson"
+          },
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "secondperson"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-30",
+          "departureTime": "07:55",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "inbound": {
+          "departureDate": "2016-05-31",
+          "departureTime": "17:55",
+          "origin": "8727100",
+          "destination": "7015400"
+        }
+      },
+      {
+        "referenceCode": "TICKETING123",
+        "pnr": "TCARML",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "firstperson"
+          },
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "secondperson"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-30",
+          "departureTime": "05:55",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "inbound": {
+          "departureDate": "2016-05-31",
+          "departureTime": "17:55",
+          "origin": "8727100",
+          "destination": "7015400"
+        }
+      },
+      {
+        "referenceCode": "LAST_TICKET",
+        "pnr": "LASTT",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "firstperson"
+          },
+          {
+            "title": "Mr",
+            "firstName": "ticketing",
+            "lastName": "secondperson"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-30",
+          "departureTime": "07:55",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "inbound": {
+          "departureDate": "2016-05-31",
+          "departureTime": "17:55",
+          "origin": "8727100",
+          "destination": "7015400"
+        }
+      }
+    ],
+    "reserved": [
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01zmrHsODp78Tf",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-27",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01Ry7CI0wOJLf5",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "first_2",
+            "lastName": "last_2"
+          },
+          {
+            "title": "Mr",
+            "firstName": "first_1",
+            "lastName": "last_1"
+          }
+        ],
+        "inbound": {
+          "departureDate": "2016-05-28",
+          "timeSlot": "PM",
+          "origin": "8727100",
+          "destination": "7015400"
+        },
+        "outbound": {
+          "departureDate": "2016-05-27",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-24T07:31"
+      },
+      {
+        "referenceCode": "EN01bx6ppmpj9l8N",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "first_2",
+            "lastName": "last_2"
+          },
+          {
+            "title": "Mr",
+            "firstName": "first_1",
+            "lastName": "last_1"
+          }
+        ],
+        "inbound": {
+          "departureDate": "2016-05-28",
+          "timeSlot": "PM",
+          "origin": "8727100",
+          "destination": "7015400"
+        },
+        "outbound": {
+          "departureDate": "2016-05-27",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-24T07:31"
+      },
+      {
+        "referenceCode": "EN019Pbav8HqpNEF",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "first_2",
+            "lastName": "last_2"
+          },
+          {
+            "title": "Mr",
+            "firstName": "first_1",
+            "lastName": "last_1"
+          }
+        ],
+        "inbound": {
+          "departureDate": "2016-05-28",
+          "timeSlot": "PM",
+          "origin": "8727100",
+          "destination": "7015400"
+        },
+        "outbound": {
+          "departureDate": "2016-05-27",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-24T07:31"
+      },
+      {
+        "referenceCode": "EN01KB2OEh4Td4WN",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "first_1",
+            "lastName": "last_1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "first_2",
+            "lastName": "last_2"
+          }
+        ],
+        "inbound": {
+          "departureDate": "2016-05-28",
+          "timeSlot": "PM",
+          "origin": "8727100",
+          "destination": "7015400"
+        },
+        "outbound": {
+          "departureDate": "2016-05-27",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-24T07:31"
+      },
+      {
+        "referenceCode": "EN01K0h9sPTFRqBJ",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-27",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T07:31"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "EN01PhsOh45RRkXl",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      },
+      {
+        "referenceCode": "LAST_TICKET",
+        "passengers": [
+          {
+            "title": "Mr",
+            "firstName": "satish1",
+            "lastName": "gummad1"
+          },
+          {
+            "title": "Mr",
+            "firstName": "satish",
+            "lastName": "gummad"
+          }
+        ],
+        "outbound": {
+          "departureDate": "2016-05-29",
+          "timeSlot": "AM",
+          "origin": "7015400",
+          "destination": "8727100"
+        },
+        "ticketGenerationDateAndTime": "2016-05-25T06:55"
+      }
+
+    ]
+  }
+}

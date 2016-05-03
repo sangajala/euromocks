@@ -25,7 +25,7 @@ public class Enovation_apis {
             stubFor(get(urlPathMatching("/enov/availabilities/ods"))
                             .willReturn(
                                     aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
-                                            .withHeader("Content-Type", "application/json")
+                                             .withHeader("Content-Type", "application/json")
                                             .withHeader("Access-Control-Allow-Origin", "*")
                                             .withHeader("Access-Control-Allow-Credentials", "true")
                                             .withHeader("Access-Control-Allow-Headers", "accept, cid")
@@ -82,13 +82,13 @@ public class Enovation_apis {
     public void proposals() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_invalid_session.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
             stubFor(post(urlPathMatching("/enov/availabilities/proposals"))
                             //   .withRequestBody(containing("\"noOfPassengers\":\"2\""))
                             .willReturn(
-                                    aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                    aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                             .withHeader("Access-Control-Allow-Origin", "*")
                                             .withHeader("Access-Control-Allow-Credentials", "true")
                                             .withHeader("Access-Control-Allow-Headers", "accept, cid,Content-Type")
@@ -107,13 +107,13 @@ public class Enovation_apis {
     public void proposals_more() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_AMPM.json");
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/proposals_300.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
             //String response = IOUtils.toString(this.getClass().getResourceAsStream("/euromocks/ods1.json"), "UTF-8");
             stubFor(post(urlPathMatching("/enov/availabilities/proposals"))
 //                            .withRequestBody(containing("\"noOfPassengers\":\"2\""))
                             .willReturn(
-                                    aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                    aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                             .withHeader("Access-Control-Allow-Origin", "*")
                                             .withHeader("Access-Control-Allow-Credentials", "true")
                                             .withHeader("Access-Control-Allow-Headers", "accept, cid")
@@ -289,12 +289,30 @@ public class Enovation_apis {
             stubFor(get(urlPathMatching("/enov/games/GAME1"))
                     //    .withQueryParam("sessionId", containing(".*"))
                     .willReturn(
-                            aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+//                            aResponse().withStatus(412).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+
+                            aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody("{\n" +
+                                    "  \"code\" : \"GAME1\",\n" +
+                                    "  \"saleStartDate\" : \"2016-04-01\",\n" +
+                                    "  \"saleEndDate\" : \"2016-05-20\",\n" +
+                                    "  \"travelStartDate\" : \"2016-04-01\",\n" +
+                                    "  \"travelEndDate\" : \"2016-05-29\",\n" +
+                                    "  \"refCodeExpiry\" : 7,\n" +
+                                    "  \"maxPassengers\" : 4,\n" +
+                                    "  \"minPassengers\" : 2,\n" +
+                                    "  \"minAge\" : 16,\n" +
+                                    "  \"classOfService\" : \"STANDARD\",\n" +
+                                    "  \"tripType\" : \"FLEXIBLE\",\n" +
+                                    "  \"lastUpdated\" : \"2016-04-13T16:23:11\",\n" +
+                                    "  \"reminderBeforeTravel\" : 2,\n" +
+                                    "  \"displayPrice\" : true\n" +
+                                    "}")
+//                                    .withBody(""))
                                     .withHeader("Access-Control-Allow-Origin", "*")
                                     .withHeader("Access-Control-Allow-Credentials", "true")
                                     .withHeader("Access-Control-Allow-Headers", "accept, cid")
                                     .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
-                                    .withHeader("Content-Type", "application/json"))
+                    .withHeader("Content-Type", "application/json"))
 
                     .atPriority(60));
 
@@ -306,94 +324,103 @@ public class Enovation_apis {
     public void getGames() throws IOException {
         JSONParser parser = new JSONParser();
         try {
-            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/games_eno101.json");
-            JSONObject json = (JSONObject) parser.parse(fileReader);
+//            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/listOfGames.json");
+//            JSONObject json = (JSONObject) parser.parse(fileReader);
             stubFor(get(urlPathEqualTo("/enov/games"))
                     //    .withQueryParam("sessionId", containing(".*"))
                     .willReturn(
-//                            aResponse().withStatus(404).withHeader("Content-Type", "application/json").withBody(json.toJSONString()
+//                            aResponse().withFixedDelay(10000).withStatus(422).withHeader("Content-Type", "application/json").withBody("{\n" +
+//                                                    " \"errors\" : [ {\n" +
+//                                                    "   \"code\" : \"ENO_102\",\n" +
+//                                                    "   \"message\" : \"Game in the request pastGame is expired\"\n" +
+//                                                    " } ]\n" +
+//                                                    "}"
+
+//                            aResponse().withFixedDelay(120000).withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString()
                             aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(
-                                    "[\n" +
-                                    "  {\n" +
-                                    "    \"code\": \"GAME1\",\n" +
-                                    "    \"startDate\": \"2016-01-01\",\n" +
-                                    "    \"endDate\": \"2016-12-01\",\n" +
-                                    "    \"refCodeExpiry\": 7,\n" +
-                                    "    \"maxPassengers\": 4,\n" +
-                                    "    \"minPassengers\": 1,\n" +
-                                    "    \"minAge\": 16,\n" +
-                                    "    \"classOfService\": \"STANDARD\",\n" +
-                                    "    \"tripType\": \"ANY\",\n" +
-                                    "    \"lastUpdated\": \"2016-03-08T15:30:54\",\n" +
-                                    "    \"reminderBeforeTravel\": 2\n" +
-                                    "  },\n" +
-                                    "  {\n" +
-                                    "    \"code\": \"GAME2\",\n" +
-                                    "    \"startDate\": \"2016-06-01\",\n" +
-                                    "    \"endDate\": \"2016-05-20\",\n" +
-                                    "    \"refCodeExpiry\": 7,\n" +
-                                    "    \"maxPassengers\": 4,\n" +
-                                    "    \"minPassengers\": 1,\n" +
-                                    "    \"classOfService\": \"STANDARD\",\n" +
-                                    "    \"lastUpdated\": \"2016-08-30T22:05:01\",\n" +
-                                    "    \"reminderBeforeTravel\": 2\n" +
-                                    "  },\n" +
-                                    "  {\n" +
-                                    "    \"code\": \"GAME3\",\n" +
-                                    "    \"startDate\": \"2016-09-01\",\n" +
-                                    "    \"endDate\": \"2016-05-20\",\n" +
-                                    "    \"refCodeExpiry\": 7,\n" +
-                                    "    \"maxPassengers\": 4,\n" +
-                                    "    \"minPassengers\": 1,\n" +
-                                    "    \"classOfService\": \"STANDARD\",\n" +
-                                    "    \"lastUpdated\": \"2016-10-23T22:05:01\",\n" +
-                                    "    \"reminderBeforeTravel\": 2\n" +
-                                    "  },\n" +
-                                    "  {\n" +
-                                    "    \"code\": \"testGame1\",\n" +
-                                    "    \"startDate\": \"2016-04-20\",\n" +
-                                    "    \"endDate\": \"2016-05-20\",\n" +
-                                    "    \"refCodeExpiry\": 7,\n" +
-                                    "    \"maxPassengers\": 4,\n" +
-                                    "    \"minPassengers\": 2,\n" +
-                                    "    \"maxAge\": 25,\n" +
-                                    "    \"minAge\": 16,\n" +
-                                    "    \"classOfService\": \"STANDARD\",\n" +
-                                    "    \"lastUpdated\": \"2016-03-08T15:43:02\",\n" +
-                                    "    \"reminderBeforeTravel\": 2\n" +
-                                    "  },\n" +
-                                    "  {\n" +
-                                    "    \"code\": \"testGame2\",\n" +
-                                    "    \"startDate\": \"2016-04-20\",\n" +
-                                    "    \"endDate\": \"2016-05-20\",\n" +
-                                    "    \"refCodeExpiry\": 7,\n" +
-                                    "    \"maxPassengers\": 4,\n" +
-                                    "    \"minPassengers\": 2,\n" +
-                                    "    \"maxAge\": 25,\n" +
-                                    "    \"minAge\": 16,\n" +
-                                    "    \"classOfService\": \"STANDARD\",\n" +
-                                    "    \"lastUpdated\": \"2016-03-08T15:45:28\",\n" +
-                                    "    \"reminderBeforeTravel\": 2\n" +
-                                    "  },\n" +
-                                    "  {\n" +
-                                    "    \"code\": \"testGame3\",\n" +
-                                    "    \"startDate\": \"2016-04-25\",\n" +
-                                    "    \"endDate\": \"2016-05-25\",\n" +
-                                    "    \"refCodeExpiry\": 7,\n" +
-                                    "    \"maxPassengers\": 4,\n" +
-                                    "    \"minPassengers\": 2,\n" +
-                                    "    \"maxAge\": 25,\n" +
-                                    "    \"minAge\": 16,\n" +
-                                    "    \"classOfService\": \"STANDARD\",\n" +
-                                    "    \"lastUpdated\": \"2016-03-08T15:45:34\",\n" +
-                                    "    \"reminderBeforeTravel\": 2\n" +
-                                    "  }\n" +
-                                    "]")
+                                    "[ {\n" +
+                                            "  \"code\" : \"GAME1\",\n" +
+                                            "  \"saleStartDate\" : \"2016-03-01\",\n" +
+                                            "  \"saleEndDate\" : \"2016-03-20\",\n" +
+                                            "  \"travelStartDate\" : \"2016-04-01\",\n" +
+                                            "  \"travelEndDate\" : \"2016-05-29\",\n" +
+                                            "  \"refCodeExpiry\" : 7,\n" +
+                                            "  \"maxPassengers\" : 10,\n" +
+                                            "  \"minPassengers\" : 1,\n" +
+                                            "  \"minAge\" : 9,\n" +
+                                            "  \"classOfService\" : \"STANDARD\",\n" +
+                                            "  \"tripType\" : \"SINGLE_ONLY\",\n" +
+                                            "  \"lastUpdated\" : \"2016-04-13T16:23:11\",\n" +
+                                            "  \"reminderBeforeTravel\" : 2,\n" +
+                                            "  \"displayPrice\" : true\n" +
+                                            "} ]"
+//                                    "  {\n" +
+//                                    "    \"code\": \"GAME2\",\n" +
+//                                    "    \"startDate\": \"2016-06-01\",\n" +
+//                                    "    \"endDate\": \"2016-05-20\",\n" +
+//                                    "    \"refCodeExpiry\": 7,\n" +
+//                                    "    \"maxPassengers\": 4,\n" +
+//                                    "    \"minPassengers\": 1,\n" +
+//                                    "    \"classOfService\": \"STANDARD\",\n" +
+//                                    "    \"lastUpdated\": \"2016-08-30T22:05:01\",\n" +
+//                                    "    \"reminderBeforeTravel\": 2\n" +
+//                                    "  },\n" +
+//                                    "  {\n" +
+//                                    "    \"code\": \"GAME3\",\n" +
+//                                    "    \"startDate\": \"2016-09-01\",\n" +
+//                                    "    \"endDate\": \"2016-05-20\",\n" +
+//                                    "    \"refCodeExpiry\": 7,\n" +
+//                                    "    \"maxPassengers\": 4,\n" +
+//                                    "    \"minPassengers\": 1,\n" +
+//                                    "    \"classOfService\": \"STANDARD\",\n" +
+//                                    "    \"lastUpdated\": \"2016-10-23T22:05:01\",\n" +
+//                                    "    \"reminderBeforeTravel\": 2\n" +
+//                                    "  },\n" +
+//                                    "  {\n" +
+//                                    "    \"code\": \"testGame1\",\n" +
+//                                    "    \"startDate\": \"2016-04-20\",\n" +
+//                                    "    \"endDate\": \"2016-05-20\",\n" +
+//                                    "    \"refCodeExpiry\": 7,\n" +
+//                                    "    \"maxPassengers\": 4,\n" +
+//                                    "    \"minPassengers\": 2,\n" +
+//                                    "    \"maxAge\": 25,\n" +
+//                                    "    \"minAge\": 16,\n" +
+//                                    "    \"classOfService\": \"STANDARD\",\n" +
+//                                    "    \"lastUpdated\": \"2016-03-08T15:43:02\",\n" +
+//                                    "    \"reminderBeforeTravel\": 2\n" +
+//                                    "  },\n" +
+//                                    "  {\n" +
+//                                    "    \"code\": \"testGame2\",\n" +
+//                                    "    \"startDate\": \"2016-04-20\",\n" +
+//                                    "    \"endDate\": \"2016-05-20\",\n" +
+//                                    "    \"refCodeExpiry\": 7,\n" +
+//                                    "    \"maxPassengers\": 4,\n" +
+//                                    "    \"minPassengers\": 2,\n" +
+//                                    "    \"maxAge\": 25,\n" +
+//                                    "    \"minAge\": 16,\n" +
+//                                    "    \"classOfService\": \"STANDARD\",\n" +
+//                                    "    \"lastUpdated\": \"2016-03-08T15:45:28\",\n" +
+//                                    "    \"reminderBeforeTravel\": 2\n" +
+//                                    "  },\n" +
+//                                    "  {\n" +
+//                                    "    \"code\": \"testGame3\",\n" +
+//                                    "    \"startDate\": \"2016-04-25\",\n" +
+//                                    "    \"endDate\": \"2016-05-25\",\n" +
+//                                    "    \"refCodeExpiry\": 7,\n" +
+//                                    "    \"maxPassengers\": 4,\n" +
+//                                    "    \"minPassengers\": 2,\n" +
+//                                    "    \"maxAge\": 25,\n" +
+//                                    "    \"minAge\": 16,\n" +
+//                                    "    \"classOfService\": \"STANDARD\",\n" +
+//                                    "    \"lastUpdated\": \"2016-03-08T15:45:34\",\n" +
+//                                    "    \"reminderBeforeTravel\": 2\n" +
+//                                    "  }\n" +
+                            )
                                     .withHeader("Access-Control-Allow-Origin", "*")
                                     .withHeader("Access-Control-Allow-Credentials", "true")
                                     .withHeader("Access-Control-Allow-Headers", "accept, cid")
-                                    .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE"))
-//                            ))
+                                    .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+                    )
 
                     .atPriority(61));
 
@@ -401,7 +428,30 @@ public class Enovation_apis {
             e.printStackTrace();
         }
     }
+    public void booking() throws IOException {
+        JSONParser parser = new JSONParser();
 
+        FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/booking.json");
+        try {
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            stubFor(get(urlPathMatching("/enov/players/bookings"))
+                            .willReturn(
+                                    aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                            .withHeader("Content-Type", "application/json")
+                                            .withHeader("Access-Control-Allow-Origin", "*")
+                                            .withHeader("Access-Control-Allow-Credentials", "true")
+                                            .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                            .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+                                            .withHeader("Content-Type", "application/json"))
+
+
+                            .atPriority(1)
+            );
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public void reference() throws IOException {

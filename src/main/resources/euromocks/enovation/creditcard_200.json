@@ -1,0 +1,16 @@
+{
+  "creditCardFees" : [ {
+    "currency" : "EUR",
+    "fixedFeeValue" : "0.00",
+    "cardType" : "American Express"
+  }, {
+    "currency" : "EUR",
+    "fixedFeeValue" : "0.00",
+    "cardType" : "Mastercard"
+  }, {
+    "currency" : "EUR",
+    "fixedFeeValue" : "0.00",
+    "cardType" : "VISA"
+  } ],
+  "threshold" : "0.00"
+}

@@ -35,16 +35,20 @@ public class Etap implements CommandLineRunner {
     }
 
     public void run(String... args) throws Exception {
+
+//        WireMock.configureFor("stubs-services.trainz.io",8080);
         if(System.getProperty("URL")==null||System.getProperty("PORT")==null)
             WireMock.configureFor(Constants.URL, Constants.PORT);
         else
             WireMock.configureFor(System.getProperty("URL"), Integer.parseInt(System.getProperty("PORT")));
-
-
+//
+//
         try
         {
+
             resetAllRequests();
             resetToDefault();
+//            WireMock.reset();
 
         }
         catch (VerificationException e)
@@ -82,12 +86,12 @@ public class Etap implements CommandLineRunner {
             Enovation_apis satishStuff = new Enovation_apis();
 
             satishStuff.reference();
-//            satishStuff.proposals();
+            satishStuff.proposals();
 //            satishStuff.proposals_inbound();
             satishStuff.ods();
-            satishStuff.proposals_more();
-            satishStuff.ods_500();
-            satishStuff.ods_400();
+//            satishStuff.proposals_more();
+//            satishStuff.ods_500();
+//            satishStuff.ods_400();
 //            satishStuff.proposals_500();
 //            satishStuff.proposals_300();
             satishStuff.proposals_euro();
@@ -98,15 +102,15 @@ public class Etap implements CommandLineRunner {
             satishStuff.getGames();
 
 
-//            AccountsMockServer accountsMockServer = new AccountsMockServer();
-//
-//            accountsMockServer.accountsJson();
-//            accountsMockServer.optionstest();
-//            accountsMockServer.postcode();
-//            accountsMockServer.register();
-//            accountsMockServer.epp_user();
-//            accountsMockServer.engaged_user();
-//            accountsMockServer.getEPPCustomerDetails();
+            AccountsMockServer accountsMockServer = new AccountsMockServer();
+
+            accountsMockServer.accountsJson();
+            accountsMockServer.optionstest();
+            accountsMockServer.postcode();
+            accountsMockServer.register();
+            accountsMockServer.epp_user();
+            accountsMockServer.engaged_user();
+            accountsMockServer.getEPPCustomerDetails();
 //            accountsMockServer.getEngagedCustomerDetails();
 //            accountsMockServer.getOutboundData();
 //            accountsMockServer.getInboundData();
@@ -118,9 +122,13 @@ public class Etap implements CommandLineRunner {
             enovationPayment.setuppayment_500();
             enovationPayment.querypayment_200();
             enovationPayment.querypayment_400();
+            enovationPayment.creditcard_200();
+
+//            Enov_Stubs enov_stubs = new Enov_Stubs();
+            satishStuff.booking();
 
             saveAllMappings();
-
+//
         }
 
 

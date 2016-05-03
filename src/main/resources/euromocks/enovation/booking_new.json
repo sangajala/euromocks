@@ -1,0 +1,219 @@
+{
+  "bookings" : {
+    "reserved" : [ {
+      "referenceCode" : "EN01ISRFdfyJnilV",
+      "passengers" : [ {
+        "title" : "Mr",
+        "firstName" : "sriram",
+        "lastName" : "angajala"
+      }, {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-05",
+        "timeSlot" : "PM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-03",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-01T06:55"
+    }, {
+      "referenceCode" : "EN01DJ9MipzsRqJd",
+      "passengers" : [ {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      }, {
+        "title" : "Ms",
+        "firstName" : "sriram",
+        "lastName" : "angajala"
+      }, {
+        "title" : "Ms",
+        "firstName" : "test",
+        "lastName" : "test"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-05",
+        "timeSlot" : "AM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-03",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-01T06:55"
+    }, {
+      "referenceCode" : "EN010XfTv5XpBGUA",
+      "passengers" : [ {
+        "title" : "Mrs",
+        "firstName" : "test",
+        "lastName" : "test"
+      }, {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      } ],
+      "outbound" : {
+        "departureDate" : "2016-05-04",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-02T06:55"
+    }, {
+      "referenceCode" : "EN01e5ckl7PGCiAk",
+      "passengers" : [ {
+        "title" : "Ms",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      }, {
+        "title" : "Mrs",
+        "firstName" : "r",
+        "lastName" : "rresr"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-12",
+        "timeSlot" : "AM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-08",
+        "timeSlot" : "PM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-06T13:01"
+    }, {
+      "referenceCode" : "EN01Kbuu0iRo6F4l",
+      "passengers" : [ {
+        "title" : "Mrs",
+        "firstName" : "Desktop",
+        "lastName" : "Eurostar"
+      }, {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-28",
+        "timeSlot" : "PM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-27",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-25T09:24"
+    }, {
+      "referenceCode" : "EN01tNhkWeGllQKQ",
+      "passengers" : [ {
+        "title" : "Mrs",
+        "firstName" : "Desktopuser",
+        "lastName" : "Eurostar"
+      }, {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-28",
+        "timeSlot" : "PM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-27",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-25T09:24"
+    }, {
+      "referenceCode" : "EN01tNfa2Wrkfq94",
+      "passengers" : [ {
+        "title" : "Mrs",
+        "firstName" : "Desktop",
+        "lastName" : "Eurostar"
+      }, {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-28",
+        "timeSlot" : "AM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-27",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-25T09:24"
+    }, {
+      "referenceCode" : "EN01bTA5nF0xciKx",
+      "passengers" : [ {
+        "title" : "Mrs",
+        "firstName" : "Peter",
+        "lastName" : "Quinn"
+      }, {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-28",
+        "timeSlot" : "AM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-27",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-25T06:55"
+    }, {
+      "referenceCode" : "EN01tDp8Ft4ZZ76T",
+      "passengers" : [ {
+        "title" : "Mr",
+        "firstName" : "Mobileuser",
+        "lastName" : "Eurostar"
+      }, {
+        "title" : "Mrs",
+        "firstName" : "Peter",
+        "lastName" : "Quinn"
+      } ],
+      "inbound" : {
+        "departureDate" : "2016-05-28",
+        "timeSlot" : "AM",
+        "origin" : "7015400",
+        "destination" : "8727100"
+      },
+      "outbound" : {
+        "departureDate" : "2016-05-27",
+        "timeSlot" : "AM",
+        "origin" : "8727100",
+        "destination" : "7015400"
+      },
+      "ticketGenerationDateAndTime" : "2016-05-25T08:13"
+    } ]
+  }
+}

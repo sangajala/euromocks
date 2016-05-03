@@ -544,16 +544,16 @@ public class HotelMockServer
 
     @BeforeClass
     public static void run() throws Exception {
-        try {
-            resetAllRequests();
-            resetToDefault();
-        }
-        catch (Exception e)
-        {
+//        try {
+//            resetAllRequests();
+//            resetToDefault();
+//        }
+//        catch (Exception e)
+//        {
+//
+//        }
 
-        }
-
-		WireMock.configureFor(8080);
+		WireMock.configureFor("http://ec2-52-18-179-94.eu-west-1.compute.amazonaws.com/",8080);
 
     }
 

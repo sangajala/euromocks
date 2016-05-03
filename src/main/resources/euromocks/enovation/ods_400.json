@@ -1,7 +1,5 @@
 {
-  "timestamp": "2016-03-02",
-  "status": 404,
-  "error": "Not Found",
-  "message": "No message available",
-  "path": "//enov/ods"
+  "errors" : [
+    { "code" : "ENO_300", "message" : "Origin and Destinations not exist" }
+  ]
 }

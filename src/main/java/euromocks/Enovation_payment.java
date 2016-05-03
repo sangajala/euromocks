@@ -18,10 +18,30 @@ public class Enovation_payment {
         try {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/setuppayment_200.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
-            stubFor(post(urlPathMatching("/enov/pay/setup?.*"))
-                    .withRequestBody(containing("merchantReference"))
-                    .withRequestBody(containing("\"pageSetId\":\"1\""))
-                    .withRequestBody(containing("returnUrl"))
+            stubFor(post(urlPathMatching("/enov/payments/setup?.*"))
+//                    .withRequestBody(containing("merchantReference"))
+//                    .withRequestBody(containing("\"pageSetId\":\"1\""))
+//                    .withRequestBody(containing("returnUrl"))
+                    .willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
+                                    .withHeader("Access-Control-Allow-Origin", "*")
+                                    .withHeader("Access-Control-Allow-Credentials", "true")
+                                    .withHeader("Access-Control-Allow-Headers", "accept, cid")
+                                    .withHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+                    ).atPriority(31));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    void creditcard_200() throws IOException {
+        JSONParser parser = new JSONParser();
+        try {
+            FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/creditcard_200.json");
+            JSONObject json = (JSONObject) parser.parse(fileReader);
+            stubFor(get(urlPathMatching("/enov/payments/credit_card_fee?.*"))
+//                  ?  .withRequestBody(containing("merchantReference"))
+//                    .withRequestBody(containing("\"pageSetId\":\"1\""))
+//                    .withRequestBody(containing("returnUrl"))
                     .willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json").withBody(json.toJSONString())
                                     .withHeader("Access-Control-Allow-Origin", "*")
                                     .withHeader("Access-Control-Allow-Credentials", "true")
@@ -74,7 +94,7 @@ public class Enovation_payment {
         try {
             FileReader fileReader = new FileReader("src/main/resources/euromocks/enovation/querypayment_200.json");
             JSONObject json = (JSONObject) parser.parse(fileReader);
-            stubFor(get(urlPathMatching("/enov/pay/query"))
+            stubFor(get(urlPathMatching("/enov/payments/query"))
 //                    .withRequestBody(containing("merchantReference"))
 //                    .withRequestBody(containing("\"pageSetId\":\"1\""))
 //                    .withRequestBody(containing("returnUrl"))
