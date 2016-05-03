@@ -1,16 +1,32 @@
 {
   "creditCardFees" : [ {
-    "currency" : "EUR",
+    "currency" : "GBP",
     "fixedFeeValue" : "0.00",
     "cardType" : "American Express"
   }, {
-    "currency" : "EUR",
+    "currency" : "GBP",
+    "fixedFeeValue" : "0.00",
+    "cardType" : "Debit Mastercard"
+  }, {
+    "currency" : "GBP",
     "fixedFeeValue" : "0.00",
     "cardType" : "Mastercard"
   }, {
-    "currency" : "EUR",
+    "currency" : "GBP",
     "fixedFeeValue" : "0.00",
     "cardType" : "VISA"
+  }, {
+    "currency" : "GBP",
+    "fixedFeeValue" : "0.00",
+    "cardType" : "VISA Debit"
+  }, {
+    "currency" : "GBP",
+    "fixedFeeValue" : "0.00",
+    "cardType" : "VISA Delta"
+  }, {
+    "currency" : "GBP",
+    "fixedFeeValue" : "0.00",
+    "cardType" : "VISA Electron"
   } ],
-  "threshold" : "0.00"
+  "threshold" : "30.00"
 }

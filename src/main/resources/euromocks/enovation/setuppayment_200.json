@@ -1,12 +1,12 @@
 {
-  "datacashReference" : "3200900054590885",
-  "merchantreference" : "Eurostar-lKFs9jlsp3tMp5I",
+  "datacashReference" : "3700900054694814",
+  "merchantreference" : "Eurostar-r8tE36JJ87ewuDS",
   "mode" : "LIVE",
   "reason" : "ACCEPTED",
   "status" : "1",
-  "time" : 1461679636,
+  "time" : 1462292497,
   "hpsTxn" : {
-    "hpsUrl" : "https://accreditation.datacash.com/hps-cnp_a/",
-    "sessionId" : "b2567d4d-c3a7-4e39-a272-9af1e5188090"
+    "hpsUrl" : "/assets/success.html",
+    "sessionId" : "98a4f2b6-caba-4675-81e7-856ba1467f98"
   }
 }

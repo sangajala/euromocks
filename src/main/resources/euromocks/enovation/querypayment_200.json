@@ -1,33 +1,21 @@
 {
-  "ccs" : null,
-  "cardTxn" : null,
-  "risk" : null,
-  "datacashReference" : "3500900053611854",
-  "merchantreference" : "eNovationRef",
-  "mode" : "LIVE",
-  "reason" : "ACCEPTED",
-  "status" : "1",
-  "time" : 1455893668,
-  "information" : "You have queried an HPS transaction, whose data capture is pending",
-  "hpsTxn" : {
-    "method" : null,
-    "pageSetId" : null,
-    "cvvOnly" : null,
-    "hccCard" : null,
-    "hccCardDetails" : null,
-    "returnUrl" : null,
-    "expiryUrl" : null,
-    "dynamicData" : null,
-    "hpsUrl" : null,
-    "sessionId" : "ded4a78a-2626-4c3b-bf3c-ab04af2d90f5",
-    "dynamicCapture" : null,
-    "captureStatus" : "pending",
-    "cardScheme" : null,
-    "country" : null,
-    "cv2Captured" : null,
-    "expiryDate" : null,
-    "issuer" : null,
-    "pan" : null
-  },
-  "ccsrateResponseTxn" : null
+  "transactionId" : "11431",
+  "queryResponse" : {
+    "datacashReference" : "3700900054694814",
+    "merchantreference" : "Eurostar-r8tE36JJ87ewuDS",
+    "mode" : "LIVE",
+    "reason" : "ACCEPTED",
+    "status" : "1",
+    "time" : 1462292568,
+    "information" : "You have queried an HPS transaction, which has stored data that has not yet been used",
+    "hpsTxn" : {
+      "captureStatus" : "populated",
+      "cardScheme" : "VISA Electron",
+      "country" : "esp",
+      "cv2Captured" : "Yes",
+      "expiryDate" : "0218",
+      "issuer" : "Unknown",
+      "pan" : "493737******0015"
+    }
+  }
 }

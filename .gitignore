@@ -1,0 +1,5 @@
+target/*
+mappings/*
+*.iml
+.idea
+.DS_STORE
